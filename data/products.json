@@ -1,0 +1,2926 @@
+[
+  {
+    "id": 1,
+    "name": "111 WIRE BRUSH  006"
+  },
+  {
+    "id": 2,
+    "name": "AB11 1LTR"
+  },
+  {
+    "id": 3,
+    "name": "AB11 4LTR"
+  },
+  {
+    "id": 4,
+    "name": "AB12 1LTR"
+  },
+  {
+    "id": 5,
+    "name": "AB15 1LTR"
+  },
+  {
+    "id": 6,
+    "name": "AB15 4LTR"
+  },
+  {
+    "id": 7,
+    "name": "AB17 1LTR"
+  },
+  {
+    "id": 8,
+    "name": "AB17 4LTR"
+  },
+  {
+    "id": 9,
+    "name": "AB18 1LTR"
+  },
+  {
+    "id": 10,
+    "name": "AB2 10LTR"
+  },
+  {
+    "id": 11,
+    "name": "AB2 1LTR"
+  },
+  {
+    "id": 12,
+    "name": "AB2 20LTR"
+  },
+  {
+    "id": 13,
+    "name": "AB2 4LTR"
+  },
+  {
+    "id": 14,
+    "name": "AB21G 1LTR"
+  },
+  {
+    "id": 15,
+    "name": "AB21G 4LTR"
+  },
+  {
+    "id": 16,
+    "name": "AB6 1LTR"
+  },
+  {
+    "id": 17,
+    "name": "AB6 4LTR"
+  },
+  {
+    "id": 18,
+    "name": "AC16G 1LTR"
+  },
+  {
+    "id": 19,
+    "name": "AC16G 4LTR"
+  },
+  {
+    "id": 20,
+    "name": "AC17G 1LTR"
+  },
+  {
+    "id": 21,
+    "name": "AC17G 4LTR"
+  },
+  {
+    "id": 22,
+    "name": "AC18G 1LTR"
+  },
+  {
+    "id": 23,
+    "name": "AC18G 4LTR"
+  },
+  {
+    "id": 24,
+    "name": "AC21G 1LTR"
+  },
+  {
+    "id": 25,
+    "name": "AC21G 4LTR"
+  },
+  {
+    "id": 26,
+    "name": "AC2G 10LTR"
+  },
+  {
+    "id": 27,
+    "name": "AC2G 1LTR"
+  },
+  {
+    "id": 28,
+    "name": "AC2G 20LTR"
+  },
+  {
+    "id": 29,
+    "name": "AC2G 4LTR"
+  },
+  {
+    "id": 30,
+    "name": "AC9G 1LTR"
+  },
+  {
+    "id": 31,
+    "name": "AC9G 20LTR"
+  },
+  {
+    "id": 32,
+    "name": "AC9G 4LTR"
+  },
+  {
+    "id": 33,
+    "name": "ACRY DIST AKASH 20KG"
+  },
+  {
+    "id": 34,
+    "name": "ACRY DIST AKASH 2KG"
+  },
+  {
+    "id": 35,
+    "name": "ACRY DIST BADAMI 10KG"
+  },
+  {
+    "id": 36,
+    "name": "ACRY DIST BADAMI 20KG"
+  },
+  {
+    "id": 37,
+    "name": "ACRY DIST BADAMI 5KG"
+  },
+  {
+    "id": 38,
+    "name": "ACRY DIST CHANDAN 20KG"
+  },
+  {
+    "id": 39,
+    "name": "ACRY DIST DOVE WHITE 10KG"
+  },
+  {
+    "id": 40,
+    "name": "ACRY DIST GULAB 10KG"
+  },
+  {
+    "id": 41,
+    "name": "ACRY DIST GULAB 20KG"
+  },
+  {
+    "id": 42,
+    "name": "ACRY DIST GULAB 2KG"
+  },
+  {
+    "id": 43,
+    "name": "ACRY DIST GULAB 5KG"
+  },
+  {
+    "id": 44,
+    "name": "ACRY DIST HARIYALI 10KG"
+  },
+  {
+    "id": 45,
+    "name": "ACRY DIST HARIYALI 20KG"
+  },
+  {
+    "id": 46,
+    "name": "ACRY DIST HARIYALI 2KG"
+  },
+  {
+    "id": 47,
+    "name": "ACRY DIST HARIYALI 5KG"
+  },
+  {
+    "id": 48,
+    "name": "ACRY DIST JAMUNI 10KG"
+  },
+  {
+    "id": 49,
+    "name": "ACRY DIST JAMUNI 20KG"
+  },
+  {
+    "id": 50,
+    "name": "ACRY DIST JAMUNI 5KG"
+  },
+  {
+    "id": 51,
+    "name": "ACRY DIST JHARNA 10KG"
+  },
+  {
+    "id": 52,
+    "name": "ACRY DIST KAMAL 20KG"
+  },
+  {
+    "id": 53,
+    "name": "ACRY DIST KAMAL 2KG"
+  },
+  {
+    "id": 54,
+    "name": "ACRY DIST KAMAL 5KG"
+  },
+  {
+    "id": 55,
+    "name": "ACRY DIST NARANGI 10KG"
+  },
+  {
+    "id": 56,
+    "name": "ACRY DIST NARANGI 20KG"
+  },
+  {
+    "id": 57,
+    "name": "ACRY DIST NARANGI 5KG"
+  },
+  {
+    "id": 58,
+    "name": "ACRY DIST PANNA 10KG"
+  },
+  {
+    "id": 59,
+    "name": "ACRY DIST PANNA 20KG"
+  },
+  {
+    "id": 60,
+    "name": "ACRY DIST PANNA 5KG"
+  },
+  {
+    "id": 61,
+    "name": "ACRY DIST PISTA 10KG"
+  },
+  {
+    "id": 62,
+    "name": "ACRY DIST PISTA 20KG"
+  },
+  {
+    "id": 63,
+    "name": "ACRY DIST PISTA 2KG"
+  },
+  {
+    "id": 64,
+    "name": "ACRY DIST SARSON 2KG"
+  },
+  {
+    "id": 65,
+    "name": "ACRY DIST SARSON 5KG"
+  },
+  {
+    "id": 66,
+    "name": "ACRY DIST SURAJ 20KG"
+  },
+  {
+    "id": 67,
+    "name": "ACRY DIST TORAN 10KG"
+  },
+  {
+    "id": 68,
+    "name": "ACRY DIST TORAN 2KG"
+  },
+  {
+    "id": 69,
+    "name": "ACRY DIST TORAN 5KG"
+  },
+  {
+    "id": 70,
+    "name": "ACRY DIST WHITE 20KG"
+  },
+  {
+    "id": 71,
+    "name": "ACRY DIST WHITE 2KG"
+  },
+  {
+    "id": 72,
+    "name": "ACRY WALL PUTTY WHITE 1 KG"
+  },
+  {
+    "id": 73,
+    "name": "ACRY WALL PUTTY WHITE 10KG"
+  },
+  {
+    "id": 74,
+    "name": "ACRY WALL PUTTY WHITE 20KG"
+  },
+  {
+    "id": 75,
+    "name": "ACRY WALL PUTTY WHITE 5KG"
+  },
+  {
+    "id": 76,
+    "name": "AD GREY 1LTR"
+  },
+  {
+    "id": 77,
+    "name": "AD GREY 500ML"
+  },
+  {
+    "id": 78,
+    "name": "AH10 1LTR"
+  },
+  {
+    "id": 79,
+    "name": "AH17 1LTR"
+  },
+  {
+    "id": 80,
+    "name": "AH2 10LTR"
+  },
+  {
+    "id": 81,
+    "name": "AH2 1LTR"
+  },
+  {
+    "id": 82,
+    "name": "AH2 20LTR"
+  },
+  {
+    "id": 83,
+    "name": "AH2 4LTR"
+  },
+  {
+    "id": 84,
+    "name": "AH21 1LTR"
+  },
+  {
+    "id": 85,
+    "name": "AKASH 1KG POUCH"
+  },
+  {
+    "id": 86,
+    "name": "ALL DRY WALLN ROOF 1LTR"
+  },
+  {
+    "id": 87,
+    "name": "ALL DRY WALLNROOF 10LTR"
+  },
+  {
+    "id": 88,
+    "name": "ALL DRY WALLNROOF 20LTR"
+  },
+  {
+    "id": 89,
+    "name": "ALL DRY WALLNROOF 4LTR"
+  },
+  {
+    "id": 90,
+    "name": "ALLWOOD SOFT TOUCH GLOSS 200ML"
+  },
+  {
+    "id": 91,
+    "name": "ALUMINIUM 100ML"
+  },
+  {
+    "id": 92,
+    "name": "ALUMINIUM 1LTR"
+  },
+  {
+    "id": 93,
+    "name": "ALUMINIUM 200ML"
+  },
+  {
+    "id": 94,
+    "name": "ALUMINIUM 4LTR"
+  },
+  {
+    "id": 95,
+    "name": "ALUMINIUM 500ML"
+  },
+  {
+    "id": 96,
+    "name": "ALUMINIUM PAINT (GOLD) 200ML"
+  },
+  {
+    "id": 97,
+    "name": "ALUMINIUM PAINT (GOLD) 500ML"
+  },
+  {
+    "id": 98,
+    "name": "ANJEER 1KG POUCH"
+  },
+  {
+    "id": 99,
+    "name": "AP WATERPROOF WALL PUTTY 40KG"
+  },
+  {
+    "id": 100,
+    "name": "APEX RUSTIC 25KG"
+  },
+  {
+    "id": 101,
+    "name": "AQUAMARIN 10KG"
+  },
+  {
+    "id": 102,
+    "name": "AQUAMARIN 1LIT"
+  },
+  {
+    "id": 103,
+    "name": "AQUAMARIN 20KG"
+  },
+  {
+    "id": 104,
+    "name": "AQUAMARIN 2KG"
+  },
+  {
+    "id": 105,
+    "name": "AQUAMARIN 5KG"
+  },
+  {
+    "id": 106,
+    "name": "AQUAMARINE 500ML"
+  },
+  {
+    "id": 107,
+    "name": "AY11 1LTR"
+  },
+  {
+    "id": 108,
+    "name": "AY17 1LTR"
+  },
+  {
+    "id": 109,
+    "name": "AY2 10LTR"
+  },
+  {
+    "id": 110,
+    "name": "AY2 1LTR"
+  },
+  {
+    "id": 111,
+    "name": "AY2 20LTR"
+  },
+  {
+    "id": 112,
+    "name": "AY2 4LTR"
+  },
+  {
+    "id": 113,
+    "name": "AY21 1LTR"
+  },
+  {
+    "id": 114,
+    "name": "AY21 4LTR"
+  },
+  {
+    "id": 115,
+    "name": "BLACK 100ML"
+  },
+  {
+    "id": 116,
+    "name": "BLACK 1LTR"
+  },
+  {
+    "id": 117,
+    "name": "BLACK 200ML"
+  },
+  {
+    "id": 118,
+    "name": "BLACK 4LTR"
+  },
+  {
+    "id": 119,
+    "name": "BLACK 500ML"
+  },
+  {
+    "id": 120,
+    "name": "BLACK 50ML"
+  },
+  {
+    "id": 121,
+    "name": "BLACK COLORANT 1LTR"
+  },
+  {
+    "id": 122,
+    "name": "BLACK ENAMEL 1LTR"
+  },
+  {
+    "id": 123,
+    "name": "BLUE COLORANT 1LTR"
+  },
+  {
+    "id": 124,
+    "name": "BLZ WHITE 100ML"
+  },
+  {
+    "id": 125,
+    "name": "BLZ WHITE 1LTR"
+  },
+  {
+    "id": 126,
+    "name": "BLZ WHITE 200ML"
+  },
+  {
+    "id": 127,
+    "name": "BLZ WHITE 20LTR"
+  },
+  {
+    "id": 128,
+    "name": "BLZ WHITE 4LTR"
+  },
+  {
+    "id": 129,
+    "name": "BLZ WHITE 500ML"
+  },
+  {
+    "id": 130,
+    "name": "BROWN 100ML"
+  },
+  {
+    "id": 131,
+    "name": "BROWN 1LTR"
+  },
+  {
+    "id": 132,
+    "name": "BROWN 200ML"
+  },
+  {
+    "id": 133,
+    "name": "BROWN 20LTR"
+  },
+  {
+    "id": 134,
+    "name": "BROWN 4LTR"
+  },
+  {
+    "id": 135,
+    "name": "BROWN 500ML"
+  },
+  {
+    "id": 136,
+    "name": "BROWN ENAMEL 1LTR"
+  },
+  {
+    "id": 137,
+    "name": "BROWN ENAMEL 500ML"
+  },
+  {
+    "id": 138,
+    "name": "BRT BLUE 1LTR"
+  },
+  {
+    "id": 139,
+    "name": "BRT GREEN 1LTR"
+  },
+  {
+    "id": 140,
+    "name": "BRT RED 1LTR"
+  },
+  {
+    "id": 141,
+    "name": "BRT Y OXIDE 1LTR"
+  },
+  {
+    "id": 142,
+    "name": "BRT YELLOW 1LTR"
+  },
+  {
+    "id": 143,
+    "name": "BRUSH 5'' 790"
+  },
+  {
+    "id": 144,
+    "name": "BUS GREEN 100 ML"
+  },
+  {
+    "id": 145,
+    "name": "BUS GREEN 1LTR"
+  },
+  {
+    "id": 146,
+    "name": "BUS GREEN 200ML"
+  },
+  {
+    "id": 147,
+    "name": "BUS GREEN 500ML"
+  },
+  {
+    "id": 148,
+    "name": "BUS GREEN 50ML"
+  },
+  {
+    "id": 149,
+    "name": "BUS GREEN ENAMEL 1LTR"
+  },
+  {
+    "id": 150,
+    "name": "BUS GREEN ENAMEL 500ML"
+  },
+  {
+    "id": 151,
+    "name": "BW1 10LTR"
+  },
+  {
+    "id": 152,
+    "name": "BW1 1LTR"
+  },
+  {
+    "id": 153,
+    "name": "BW1 20LTR"
+  },
+  {
+    "id": 154,
+    "name": "BW1 4LTR"
+  },
+  {
+    "id": 155,
+    "name": "BW11 1LTR"
+  },
+  {
+    "id": 156,
+    "name": "BW11 4LTR"
+  },
+  {
+    "id": 157,
+    "name": "BW12 1LTR"
+  },
+  {
+    "id": 158,
+    "name": "BW16 1LTR"
+  },
+  {
+    "id": 159,
+    "name": "BW22 1LTR"
+  },
+  {
+    "id": 160,
+    "name": "BW22 4LTR"
+  },
+  {
+    "id": 161,
+    "name": "CANDY 10KG"
+  },
+  {
+    "id": 162,
+    "name": "CANDY 5KG"
+  },
+  {
+    "id": 163,
+    "name": "CAS GREEN 1LIT"
+  },
+  {
+    "id": 164,
+    "name": "CAS GREEN 500ML"
+  },
+  {
+    "id": 165,
+    "name": "CF13 STYLE COLOR FRESH 10LTR"
+  },
+  {
+    "id": 166,
+    "name": "CF13 STYLE COLOR FRESH 1LTR"
+  },
+  {
+    "id": 167,
+    "name": "CF13 STYLE COLOR FRESH 20LTR"
+  },
+  {
+    "id": 168,
+    "name": "CF13 STYLE COLOR FRESH 4LTR"
+  },
+  {
+    "id": 169,
+    "name": "CF99 STYLE COLOR FRESH 1LTR"
+  },
+  {
+    "id": 170,
+    "name": "COLORANT CLEAR 500ML"
+  },
+  {
+    "id": 171,
+    "name": "CS WHITE STYLE COLOR SMART 10LTR"
+  },
+  {
+    "id": 172,
+    "name": "CS WHITE STYLE COLOR SMART 1LTR"
+  },
+  {
+    "id": 173,
+    "name": "CS WHITE STYLE COLOR SMART 20LTR"
+  },
+  {
+    "id": 174,
+    "name": "CS WHITE STYLE COLOR SMART 4LTR"
+  },
+  {
+    "id": 175,
+    "name": "CS1 STYLE COLOR SMART 10LTR"
+  },
+  {
+    "id": 176,
+    "name": "CS1 STYLE COLOR SMART 1LTR"
+  },
+  {
+    "id": 177,
+    "name": "CS1 STYLE COLOR SMART 20LTR"
+  },
+  {
+    "id": 178,
+    "name": "CS1 STYLE COLOR SMART 4LTR"
+  },
+  {
+    "id": 179,
+    "name": "CS2 STYLE COLOR SMART 1LTR"
+  },
+  {
+    "id": 180,
+    "name": "CS2 STYLE COLOR SMART 4LTR"
+  },
+  {
+    "id": 181,
+    "name": "CS5 STYLE COLOR SMART 1LTR"
+  },
+  {
+    "id": 182,
+    "name": "CS6 STYLE COLOR SMART 1LTR"
+  },
+  {
+    "id": 183,
+    "name": "CS99 STYLE COLOR SMART 1LTR"
+  },
+  {
+    "id": 184,
+    "name": "CS99 STYLE COLOR SMART 4LTR"
+  },
+  {
+    "id": 185,
+    "name": "CSS WHITE STYLE COLOR SMART SHINE 10LTR"
+  },
+  {
+    "id": 186,
+    "name": "CSS WHITE STYLE COLOR SMART SHINE 1LTR"
+  },
+  {
+    "id": 187,
+    "name": "CSS WHITE STYLE COLOR SMART SHINE 20LTR"
+  },
+  {
+    "id": 188,
+    "name": "CSS1 STYLE COLOR SMART SHINE 10LTR"
+  },
+  {
+    "id": 189,
+    "name": "CSS1 STYLE COLOR SMART SHINE 1LTR"
+  },
+  {
+    "id": 190,
+    "name": "CSS1 STYLE COLOR SMART SHINE 20LTR"
+  },
+  {
+    "id": 191,
+    "name": "CSS1 STYLE COLOR SMART SHINE 4LTR"
+  },
+  {
+    "id": 192,
+    "name": "CSS2 STYLE COLOR SMART SHINE 1LTR"
+  },
+  {
+    "id": 193,
+    "name": "CSS2 STYLE COLOR SMART SHINE 4LTR"
+  },
+  {
+    "id": 194,
+    "name": "CSS99 STYLE COLOR SMART SHINE 1LTR"
+  },
+  {
+    "id": 195,
+    "name": "CSS99 STYLE COLOR SMART SHINE 4LTR"
+  },
+  {
+    "id": 196,
+    "name": "D KLOG"
+  },
+  {
+    "id": 197,
+    "name": "DAFFODIL N 10KG"
+  },
+  {
+    "id": 198,
+    "name": "DAFFODIL N 20KG"
+  },
+  {
+    "id": 199,
+    "name": "DAFFODIL N 2KG"
+  },
+  {
+    "id": 200,
+    "name": "DAFFODIL N 5KG"
+  },
+  {
+    "id": 201,
+    "name": "DARK GREEN 500ML"
+  },
+  {
+    "id": 202,
+    "name": "DEEP AQUA 10KG"
+  },
+  {
+    "id": 203,
+    "name": "DEEP AQUA 20KG"
+  },
+  {
+    "id": 204,
+    "name": "DEEP GREEN 1LTR"
+  },
+  {
+    "id": 205,
+    "name": "DEEP ORANGE 100ML"
+  },
+  {
+    "id": 206,
+    "name": "DEEP ORANGE 1LTR"
+  },
+  {
+    "id": 207,
+    "name": "DEEP ORANGE 200ML"
+  },
+  {
+    "id": 208,
+    "name": "DEEP ORANGE 4LTR"
+  },
+  {
+    "id": 209,
+    "name": "DEEP ORANGE 500ML"
+  },
+  {
+    "id": 210,
+    "name": "DEEP RED 1LTR"
+  },
+  {
+    "id": 211,
+    "name": "DEEP RED OXIDE 1LTR"
+  },
+  {
+    "id": 212,
+    "name": "DEEP VOILET 1LTR"
+  },
+  {
+    "id": 213,
+    "name": "DEEP YELLOW 1LTR"
+  },
+  {
+    "id": 214,
+    "name": "DR. FIXIT CRACK POWDER 1KG"
+  },
+  {
+    "id": 215,
+    "name": "DR. FIXIT CRACK POWDER 500GM"
+  },
+  {
+    "id": 216,
+    "name": "DR. FIXIT CRACK X 1KG"
+  },
+  {
+    "id": 217,
+    "name": "DR. FIXIT LW 10LTR"
+  },
+  {
+    "id": 218,
+    "name": "DR. FIXIT LW 1LTR"
+  },
+  {
+    "id": 219,
+    "name": "DR. FIXIT LW 200ML"
+  },
+  {
+    "id": 220,
+    "name": "DR. FIXIT LW 20LTR"
+  },
+  {
+    "id": 221,
+    "name": "DR. FIXIT LW 5LTR"
+  },
+  {
+    "id": 222,
+    "name": "DR. FIXIT POWERCRETE 50KG"
+  },
+  {
+    "id": 223,
+    "name": "DR. FIXIT RAINCOAT CLASSIC 20LTR"
+  },
+  {
+    "id": 224,
+    "name": "DR. FIXIT RAINCOAT CLASSIC 4LTR"
+  },
+  {
+    "id": 225,
+    "name": "DR. FIXIT RAINCOAT NEO 10LTR"
+  },
+  {
+    "id": 226,
+    "name": "DR. FIXIT RAINCOAT NEO 1LTR"
+  },
+  {
+    "id": 227,
+    "name": "DR. FIXIT RAINCOAT NEO 20LTR"
+  },
+  {
+    "id": 228,
+    "name": "DR. FIXIT RAINCOAT NEO 4LTR"
+  },
+  {
+    "id": 229,
+    "name": "DR. FIXIT RAINCOAT WPC 20LTR"
+  },
+  {
+    "id": 230,
+    "name": "DR. FIXIT ROOFSEAL CLASSIC 1LTR"
+  },
+  {
+    "id": 231,
+    "name": "DR. FIXIT ROOFSEAL CLASSIC 4LTR"
+  },
+  {
+    "id": 232,
+    "name": "DR. FIXIT ROOFSEEL CLASSIC 20LTR"
+  },
+  {
+    "id": 233,
+    "name": "DR. FIXIT SURE SEAL 1KG"
+  },
+  {
+    "id": 234,
+    "name": "DR. FIXIT URP 10KG"
+  },
+  {
+    "id": 235,
+    "name": "DR. FIXIT URP 1KG"
+  },
+  {
+    "id": 236,
+    "name": "DR. FIXIT URP 200GM"
+  },
+  {
+    "id": 237,
+    "name": "DR. FIXIT URP 20KG"
+  },
+  {
+    "id": 238,
+    "name": "DR. FIXIT URP 500GM"
+  },
+  {
+    "id": 239,
+    "name": "DR. FIXIT URP 5KG"
+  },
+  {
+    "id": 240,
+    "name": "EARTH COLOR OCHRE 25 KG"
+  },
+  {
+    "id": 241,
+    "name": "EB1 1LTR"
+  },
+  {
+    "id": 242,
+    "name": "EB1 4LTR"
+  },
+  {
+    "id": 243,
+    "name": "EB1 500ML"
+  },
+  {
+    "id": 244,
+    "name": "EB10 1LTR"
+  },
+  {
+    "id": 245,
+    "name": "EB10 500ML"
+  },
+  {
+    "id": 246,
+    "name": "EB15 1LTR"
+  },
+  {
+    "id": 247,
+    "name": "EB15 500ML"
+  },
+  {
+    "id": 248,
+    "name": "EB20 1LTR"
+  },
+  {
+    "id": 249,
+    "name": "EB20 500ML"
+  },
+  {
+    "id": 250,
+    "name": "EB6 1LTR"
+  },
+  {
+    "id": 251,
+    "name": "EB6 4LTR"
+  },
+  {
+    "id": 252,
+    "name": "EB6 500ML"
+  },
+  {
+    "id": 253,
+    "name": "EC WHITE CALISTA EVER CLEAR 10LTR"
+  },
+  {
+    "id": 254,
+    "name": "EC WHITE CALISTA EVER CLEAR 20LTR"
+  },
+  {
+    "id": 255,
+    "name": "EC1 CALISTA EVER CLEAR 10LTR"
+  },
+  {
+    "id": 256,
+    "name": "EC1 CALISTA EVER CLEAR 1LTR"
+  },
+  {
+    "id": 257,
+    "name": "EC1 CALISTA EVER CLEAR 20LTR"
+  },
+  {
+    "id": 258,
+    "name": "EC1 CALISTA EVER CLEAR 4LTR"
+  },
+  {
+    "id": 259,
+    "name": "EL BLUE N 10KG"
+  },
+  {
+    "id": 260,
+    "name": "EL BLUE N 20KG"
+  },
+  {
+    "id": 261,
+    "name": "EL BLUE N 2KG"
+  },
+  {
+    "id": 262,
+    "name": "EL BLUE N 5KG"
+  },
+  {
+    "id": 263,
+    "name": "ERD COLORANT 1LTR"
+  },
+  {
+    "id": 264,
+    "name": "EW WHITE CALISTA EVER WASH 1 LTR"
+  },
+  {
+    "id": 265,
+    "name": "EW WHITE CALISTA EVER WASH 4 LTR"
+  },
+  {
+    "id": 266,
+    "name": "EW1 CALISTA EVER WASH 1 LTR"
+  },
+  {
+    "id": 267,
+    "name": "EW2 CALISTA EVER WASH 1 LTR"
+  },
+  {
+    "id": 268,
+    "name": "EW5 CALISTA EVER WASH 1LTR"
+  },
+  {
+    "id": 269,
+    "name": "EW99 CALISTA EVER WASH 1LTR"
+  },
+  {
+    "id": 270,
+    "name": "EWS1 CALISTA EVER WASH SHINE 10LTR"
+  },
+  {
+    "id": 271,
+    "name": "EWS1 CALISTA EVER WASH SHINE 1LTR"
+  },
+  {
+    "id": 272,
+    "name": "EWS1 CALISTA EVER WASH SHINE 20LTR"
+  },
+  {
+    "id": 273,
+    "name": "EWS1 CALISTA EVER WASH SHINE 4LTR"
+  },
+  {
+    "id": 274,
+    "name": "EWS2 CALISTA EVER WASH SHINE 1LTR"
+  },
+  {
+    "id": 275,
+    "name": "EWS5 CALISTA EVER WASH SHINE 1LTR"
+  },
+  {
+    "id": 276,
+    "name": "EWS99 CALISTA EVER WASH SHINE 1LTR"
+  },
+  {
+    "id": 277,
+    "name": "EYL COLORANT"
+  },
+  {
+    "id": 278,
+    "name": "F1 NO.2 KALAM"
+  },
+  {
+    "id": 279,
+    "name": "F1 NO.4 KALAM"
+  },
+  {
+    "id": 280,
+    "name": "F1 NO.6 KALAM"
+  },
+  {
+    "id": 281,
+    "name": "F1 NO.8 KALAM"
+  },
+  {
+    "id": 282,
+    "name": "FAS GRN 100ML"
+  },
+  {
+    "id": 283,
+    "name": "FAST BLACK 100ML"
+  },
+  {
+    "id": 284,
+    "name": "FAST BLACK 50ML"
+  },
+  {
+    "id": 285,
+    "name": "FAST BLUE 50ML"
+  },
+  {
+    "id": 286,
+    "name": "FAST GRN 50ML"
+  },
+  {
+    "id": 287,
+    "name": "FAST ORANGE 100ML"
+  },
+  {
+    "id": 288,
+    "name": "FAST ORANGE 50ML"
+  },
+  {
+    "id": 289,
+    "name": "FAST RED 50ML"
+  },
+  {
+    "id": 290,
+    "name": "FAST VIOLET 100ML"
+  },
+  {
+    "id": 291,
+    "name": "FAST VIOLET 50ML"
+  },
+  {
+    "id": 292,
+    "name": "FAST Y GRN 100ML"
+  },
+  {
+    "id": 293,
+    "name": "FAST Y GRN 50ML"
+  },
+  {
+    "id": 294,
+    "name": "FAST Y OXIDE 50ML"
+  },
+  {
+    "id": 295,
+    "name": "FAST YELLOW 100ML"
+  },
+  {
+    "id": 296,
+    "name": "FAST YELLOW 50ML"
+  },
+  {
+    "id": 297,
+    "name": "FEVICOL DDL 125GM"
+  },
+  {
+    "id": 298,
+    "name": "FEVICOL DDL 250GM"
+  },
+  {
+    "id": 299,
+    "name": "FEVICOL HEATX 100ML"
+  },
+  {
+    "id": 300,
+    "name": "FEVICOL HEATX 200ML"
+  },
+  {
+    "id": 301,
+    "name": "FEVICOL SH 125GM"
+  },
+  {
+    "id": 302,
+    "name": "FEVICOL SH 250GM"
+  },
+  {
+    "id": 303,
+    "name": "FEVICOL SH 5KG"
+  },
+  {
+    "id": 304,
+    "name": "FILLER WHITE 1 KG"
+  },
+  {
+    "id": 305,
+    "name": "FSS11 1LTR"
+  },
+  {
+    "id": 306,
+    "name": "FSS11 4LTR"
+  },
+  {
+    "id": 307,
+    "name": "FSS12 1LTR"
+  },
+  {
+    "id": 308,
+    "name": "FSS16 1LTR"
+  },
+  {
+    "id": 309,
+    "name": "FSS22 1LTR"
+  },
+  {
+    "id": 310,
+    "name": "FSS22 4LTR"
+  },
+  {
+    "id": 311,
+    "name": "G BROWN 1LTR"
+  },
+  {
+    "id": 312,
+    "name": "G BROWN 200ML"
+  },
+  {
+    "id": 313,
+    "name": "G BROWN 4LIT"
+  },
+  {
+    "id": 314,
+    "name": "G BROWN 500ML"
+  },
+  {
+    "id": 315,
+    "name": "G BROWN ENAMEL 500ML"
+  },
+  {
+    "id": 316,
+    "name": "G YELLOW 100ML"
+  },
+  {
+    "id": 317,
+    "name": "G YELLOW 1LTR"
+  },
+  {
+    "id": 318,
+    "name": "G YELLOW 200ML"
+  },
+  {
+    "id": 319,
+    "name": "G YELLOW 4LTR"
+  },
+  {
+    "id": 320,
+    "name": "G YELLOW 500ML"
+  },
+  {
+    "id": 321,
+    "name": "GL10N 1LTR"
+  },
+  {
+    "id": 322,
+    "name": "GL10N 4LTR"
+  },
+  {
+    "id": 323,
+    "name": "GL13N 1LTR"
+  },
+  {
+    "id": 324,
+    "name": "GL22N 1LTR"
+  },
+  {
+    "id": 325,
+    "name": "GL22N 4LTR"
+  },
+  {
+    "id": 326,
+    "name": "GL3N 10LTR"
+  },
+  {
+    "id": 327,
+    "name": "GL3N 1LTR"
+  },
+  {
+    "id": 328,
+    "name": "GL3N 20LTR"
+  },
+  {
+    "id": 329,
+    "name": "GL3N 4LTR"
+  },
+  {
+    "id": 330,
+    "name": "GOLD 1LTR"
+  },
+  {
+    "id": 331,
+    "name": "GOLD 200ML"
+  },
+  {
+    "id": 332,
+    "name": "GOLD 50ML"
+  },
+  {
+    "id": 333,
+    "name": "GOLD METALIC EMULSION 100ML"
+  },
+  {
+    "id": 334,
+    "name": "GOLD METALIC EMULSION 1LTR"
+  },
+  {
+    "id": 335,
+    "name": "GOLD METALIC EMULSION 200ML"
+  },
+  {
+    "id": 336,
+    "name": "GOLD METALIC EMULSION 500ML"
+  },
+  {
+    "id": 337,
+    "name": "GP THINEER CLEAR 1LTR"
+  },
+  {
+    "id": 338,
+    "name": "GREEN COLORANT 1LTR"
+  },
+  {
+    "id": 339,
+    "name": "GULAB 1KG POUCH"
+  },
+  {
+    "id": 340,
+    "name": "GURUMALA  PVC"
+  },
+  {
+    "id": 341,
+    "name": "HD RED COLORANT 1LTR"
+  },
+  {
+    "id": 342,
+    "name": "HONDA W4'' BRUSH"
+  },
+  {
+    "id": 343,
+    "name": "HONDA W5'' BRUSH"
+  },
+  {
+    "id": 344,
+    "name": "HQ10N 1LTR"
+  },
+  {
+    "id": 345,
+    "name": "HQ10N 4LTR"
+  },
+  {
+    "id": 346,
+    "name": "HQ13 1LTR"
+  },
+  {
+    "id": 347,
+    "name": "HQ16 1LTR"
+  },
+  {
+    "id": 348,
+    "name": "HQ16 4LTR"
+  },
+  {
+    "id": 349,
+    "name": "HQ17 1LTR"
+  },
+  {
+    "id": 350,
+    "name": "HQ17 4LTR"
+  },
+  {
+    "id": 351,
+    "name": "HQ20N 1LTR"
+  },
+  {
+    "id": 352,
+    "name": "HQ20N 4LTR"
+  },
+  {
+    "id": 353,
+    "name": "HQ2N 10LTR"
+  },
+  {
+    "id": 354,
+    "name": "HQ2N 1LTR"
+  },
+  {
+    "id": 355,
+    "name": "HQ2N 200ML"
+  },
+  {
+    "id": 356,
+    "name": "HQ2N 20LTR"
+  },
+  {
+    "id": 357,
+    "name": "HQ2N 4"
+  },
+  {
+    "id": 358,
+    "name": "HQ2N 4LTR"
+  },
+  {
+    "id": 359,
+    "name": "HQ6 1LTR"
+  },
+  {
+    "id": 360,
+    "name": "HSS2 1LTR"
+  },
+  {
+    "id": 361,
+    "name": "HSS2 4LTR"
+  },
+  {
+    "id": 362,
+    "name": "IMP CRIM 1LTR"
+  },
+  {
+    "id": 363,
+    "name": "IMP CRIM 200ML"
+  },
+  {
+    "id": 364,
+    "name": "IMP CRIM 500ML"
+  },
+  {
+    "id": 365,
+    "name": "IN EXT EMUL JOLLY HOLLY 1LTR"
+  },
+  {
+    "id": 366,
+    "name": "IN EXT EMUL OXFORD BLUE 1LTR"
+  },
+  {
+    "id": 367,
+    "name": "IN EXT EMUL TERRACOTA 1LTR"
+  },
+  {
+    "id": 368,
+    "name": "IN EXT EMUL TERRACOTA 500ML"
+  },
+  {
+    "id": 369,
+    "name": "IN EXT SHEEN EMUL NEW LEAF 1LTR"
+  },
+  {
+    "id": 370,
+    "name": "IN EXT SHEEN EMUL NEW LEAF 4LTR"
+  },
+  {
+    "id": 371,
+    "name": "IN EXT SHEEN EMUL NEW LEAF 500ML"
+  },
+  {
+    "id": 372,
+    "name": "IN EXT SHEEN EMUL NEW SUNRISE 500ML"
+  },
+  {
+    "id": 373,
+    "name": "IN EXT SHEEN EMUL SIG RED PLUS 1LTR"
+  },
+  {
+    "id": 374,
+    "name": "IN EXT SHEEN EMUL SIG RED PLUS 4LTR"
+  },
+  {
+    "id": 375,
+    "name": "IN EXT SHEEN EMUL SIG RED PLUS 500ML"
+  },
+  {
+    "id": 376,
+    "name": "IN EXT SHEEN EMUL TERRACOTTA 4LIT"
+  },
+  {
+    "id": 377,
+    "name": "IN EXT SHEENEMUL ROYAL BLUE 1LTR"
+  },
+  {
+    "id": 378,
+    "name": "IN EXT SHEENEMUL ROYAL BLUE 500ML"
+  },
+  {
+    "id": 379,
+    "name": "IN EXT SHEENEMUL SUNRISE 1LTR"
+  },
+  {
+    "id": 380,
+    "name": "IN EXT SHEENEMUL SUNRISE 4LTR"
+  },
+  {
+    "id": 381,
+    "name": "IN EXT SHEENEMUL TERRACOTTA 1LTR"
+  },
+  {
+    "id": 382,
+    "name": "IN REDOXIDE METAL PRIMER 200ML"
+  },
+  {
+    "id": 383,
+    "name": "INT GLS CLEAR 1LTR"
+  },
+  {
+    "id": 384,
+    "name": "INT GLS CLEAR 200ML"
+  },
+  {
+    "id": 385,
+    "name": "INT GLS CLEAR 500ML"
+  },
+  {
+    "id": 386,
+    "name": "INT RED COLORANT 1LTR"
+  },
+  {
+    "id": 387,
+    "name": "INT ROLLER"
+  },
+  {
+    "id": 388,
+    "name": "IRD COLORANT 1LTR"
+  },
+  {
+    "id": 389,
+    "name": "IYL COLORANT 1LTR"
+  },
+  {
+    "id": 390,
+    "name": "JAMUNI 1KG POUCH"
+  },
+  {
+    "id": 391,
+    "name": "JIPPY STAINER 50ML"
+  },
+  {
+    "id": 392,
+    "name": "JK PUTTY 40KG"
+  },
+  {
+    "id": 393,
+    "name": "JK PUTTY LEVEL MAX 20KG"
+  },
+  {
+    "id": 394,
+    "name": "JK PUTTY SHIELD MAX 20KG"
+  },
+  {
+    "id": 395,
+    "name": "JK PUTTY SHILDMAX 40KG"
+  },
+  {
+    "id": 396,
+    "name": "JK WHITE CEMENT 1KG"
+  },
+  {
+    "id": 397,
+    "name": "JK WHITE CEMENT 25KG"
+  },
+  {
+    "id": 398,
+    "name": "JK WHITE CEMENT 50KG"
+  },
+  {
+    "id": 399,
+    "name": "JK WHITE CEMENT 5KG"
+  },
+  {
+    "id": 400,
+    "name": "Kalai 5kg"
+  },
+  {
+    "id": 401,
+    "name": "KAMAL 1KG POUCH"
+  },
+  {
+    "id": 402,
+    "name": "LATEX INT 10 KG"
+  },
+  {
+    "id": 403,
+    "name": "LATEX INT 20 KG"
+  },
+  {
+    "id": 404,
+    "name": "LATEX INT 5 KG"
+  },
+  {
+    "id": 405,
+    "name": "LM YELLOW 1LIT"
+  },
+  {
+    "id": 406,
+    "name": "M SEAL EZYSEAL 40GM"
+  },
+  {
+    "id": 407,
+    "name": "M SEAL PHATAPHAT 25GM"
+  },
+  {
+    "id": 408,
+    "name": "M SEAL PVC SOLVENT 100ML"
+  },
+  {
+    "id": 409,
+    "name": "M SEAL PVC SOLVENT 20ML"
+  },
+  {
+    "id": 410,
+    "name": "M SEAL PVC SOLVENT 50ML"
+  },
+  {
+    "id": 411,
+    "name": "M SEAL UPVC SOLVENT 100ML"
+  },
+  {
+    "id": 412,
+    "name": "M SEAL UPVC SOLVENT 50ML"
+  },
+  {
+    "id": 413,
+    "name": "M SEAL UPVC SOLVENT 7ML"
+  },
+  {
+    "id": 414,
+    "name": "MAGENTA COLORANT 1LTR"
+  },
+  {
+    "id": 415,
+    "name": "MAROON 1LTR ACE"
+  },
+  {
+    "id": 416,
+    "name": "MER RED 500ML"
+  },
+  {
+    "id": 417,
+    "name": "MERIPINK 10KG"
+  },
+  {
+    "id": 418,
+    "name": "MERIPINK 2KG"
+  },
+  {
+    "id": 419,
+    "name": "MERIPINK 5KG"
+  },
+  {
+    "id": 420,
+    "name": "MERPINK 20KG"
+  },
+  {
+    "id": 421,
+    "name": "MID BUFF 1LTR"
+  },
+  {
+    "id": 422,
+    "name": "MID BUFF 500ML"
+  },
+  {
+    "id": 423,
+    "name": "MING RED 1LIT"
+  },
+  {
+    "id": 424,
+    "name": "MINT GREEN 1LTR"
+  },
+  {
+    "id": 425,
+    "name": "MINT GREEN 200ML"
+  },
+  {
+    "id": 426,
+    "name": "MINT GREEN 500ML"
+  },
+  {
+    "id": 427,
+    "name": "MOTI 1KG POUCH"
+  },
+  {
+    "id": 428,
+    "name": "NATTO CRETE ADVANCE 5LTR"
+  },
+  {
+    "id": 429,
+    "name": "NS WHITE CALISTA NEO STAR 10LTR"
+  },
+  {
+    "id": 430,
+    "name": "NS WHITE CALISTA NEO STAR 1LTR"
+  },
+  {
+    "id": 431,
+    "name": "NS WHITE CALISTA NEO STAR 20LTR"
+  },
+  {
+    "id": 432,
+    "name": "NS WHITE CALISTA NEO STAR 4LTR"
+  },
+  {
+    "id": 433,
+    "name": "NS1 CALISTA NEO STAR 1LTR"
+  },
+  {
+    "id": 434,
+    "name": "NS2 CALISTA NEO STAR 1LTR"
+  },
+  {
+    "id": 435,
+    "name": "NS5 CALISTA NEO STAR 1LTR"
+  },
+  {
+    "id": 436,
+    "name": "NS99 CALISTA NEO STAR 1LTR"
+  },
+  {
+    "id": 437,
+    "name": "NSS1 CALISTA NEO STAR SHINE 20LTR"
+  },
+  {
+    "id": 438,
+    "name": "OFF WHITE 1LTR"
+  },
+  {
+    "id": 439,
+    "name": "OFF WHITE 4LTR"
+  },
+  {
+    "id": 440,
+    "name": "OFF WHITE 500ML"
+  },
+  {
+    "id": 441,
+    "name": "ONE PRO SMOOTH PUTTY 1KG"
+  },
+  {
+    "id": 442,
+    "name": "OPUS SPRY PAINT BLACK 400ML"
+  },
+  {
+    "id": 443,
+    "name": "OPUS SPRY PAINT WHITE 400ML"
+  },
+  {
+    "id": 444,
+    "name": "OPUS VOILET 50ML"
+  },
+  {
+    "id": 445,
+    "name": "ORANGE COLORANT 1LTR"
+  },
+  {
+    "id": 446,
+    "name": "ORANGE PEEL METALIC EMULSION 500ML"
+  },
+  {
+    "id": 447,
+    "name": "OX BLUE 100ML"
+  },
+  {
+    "id": 448,
+    "name": "OX BLUE 200ML"
+  },
+  {
+    "id": 449,
+    "name": "OX BLUE 500ML"
+  },
+  {
+    "id": 450,
+    "name": "P.O RED 100ML"
+  },
+  {
+    "id": 451,
+    "name": "P.O RED 1LTR"
+  },
+  {
+    "id": 452,
+    "name": "P.O RED 200ML"
+  },
+  {
+    "id": 453,
+    "name": "P.O RED 500ML"
+  },
+  {
+    "id": 454,
+    "name": "P.O RED 50ML"
+  },
+  {
+    "id": 455,
+    "name": "PALE ROSE 1LTR"
+  },
+  {
+    "id": 456,
+    "name": "PALE ROSE 4LTR"
+  },
+  {
+    "id": 457,
+    "name": "PALE ROSE 500ML"
+  },
+  {
+    "id": 458,
+    "name": "PALEROSE 20KG"
+  },
+  {
+    "id": 459,
+    "name": "PALEROSE 5KG"
+  },
+  {
+    "id": 460,
+    "name": "PANNA 1KG POUCH"
+  },
+  {
+    "id": 461,
+    "name": "PB WHITE STYLE POWER BRIGHT 10LTR"
+  },
+  {
+    "id": 462,
+    "name": "PB WHITE STYLE POWER BRIGHT 1LTR"
+  },
+  {
+    "id": 463,
+    "name": "PB1 STYLE POWER BRIGHT 10LTR"
+  },
+  {
+    "id": 464,
+    "name": "PB1 STYLE POWER BRIGHT 20LTR"
+  },
+  {
+    "id": 465,
+    "name": "PB2 STYLE POWER BRIGHT 1LTR"
+  },
+  {
+    "id": 466,
+    "name": "PB2 STYLE POWER BRIGHT 20LTR"
+  },
+  {
+    "id": 467,
+    "name": "PB2 STYLE POWER BRIGHT 4LTR"
+  },
+  {
+    "id": 468,
+    "name": "PB99 STYLE POWER BRIGHT 1LTR"
+  },
+  {
+    "id": 469,
+    "name": "PB99 STYLE POWER BRIGHT 20LTR"
+  },
+  {
+    "id": 470,
+    "name": "PB99 STYLE POWER BRIGHT 4LTR"
+  },
+  {
+    "id": 471,
+    "name": "PES WHITE PURE ELEGANCE SHINE 10LTR"
+  },
+  {
+    "id": 472,
+    "name": "PES WHITE PURE ELEGANCE SHINE 1LTR"
+  },
+  {
+    "id": 473,
+    "name": "PES WHITE PURE ELEGANCE SHINE 4LTR"
+  },
+  {
+    "id": 474,
+    "name": "PES1 PURE ELEGANCE SHINE 10LTR"
+  },
+  {
+    "id": 475,
+    "name": "PES1 PURE ELEGANCE SHINE 1LTR"
+  },
+  {
+    "id": 476,
+    "name": "PES1 PURE ELEGANCE SHINE 20LTR"
+  },
+  {
+    "id": 477,
+    "name": "PES1 PURE ELEGANCE SHINE 4LTR"
+  },
+  {
+    "id": 478,
+    "name": "PES2 PURE ELEGANCE SHINE 1LTR"
+  },
+  {
+    "id": 479,
+    "name": "PES99 PURE ELEGANCE SHINE 1LTR"
+  },
+  {
+    "id": 480,
+    "name": "PF 13 STYLE POWER FIT -10 LTR"
+  },
+  {
+    "id": 481,
+    "name": "PF 13 STYLE POWER FIT -20 LTR"
+  },
+  {
+    "id": 482,
+    "name": "PF 96 STYLE POWER FIT 1 LTR"
+  },
+  {
+    "id": 483,
+    "name": "PF 96 STYLE POWER FIT 4 LTR"
+  },
+  {
+    "id": 484,
+    "name": "PHIROZI 100ML"
+  },
+  {
+    "id": 485,
+    "name": "PHIROZI 1LTR"
+  },
+  {
+    "id": 486,
+    "name": "PHIROZI 200ML"
+  },
+  {
+    "id": 487,
+    "name": "PHIROZI 4LTR"
+  },
+  {
+    "id": 488,
+    "name": "PHIROZI 500ML"
+  },
+  {
+    "id": 489,
+    "name": "PHIROZI 50ML"
+  },
+  {
+    "id": 490,
+    "name": "PHP WHITE STYLE PRO HIDE PRIMER 10 LTR"
+  },
+  {
+    "id": 491,
+    "name": "PHP WHITE STYLE PRO HIDE PRIMER 20 LTR"
+  },
+  {
+    "id": 492,
+    "name": "PISTA 1KG POUCH"
+  },
+  {
+    "id": 493,
+    "name": "PISTA 500ML"
+  },
+  {
+    "id": 494,
+    "name": "PL CREAM 10KG"
+  },
+  {
+    "id": 495,
+    "name": "PL CREAM 200ML"
+  },
+  {
+    "id": 496,
+    "name": "PL CREAM 20KG"
+  },
+  {
+    "id": 497,
+    "name": "PL CREAM 2KG"
+  },
+  {
+    "id": 498,
+    "name": "PL CREAM 4LIT"
+  },
+  {
+    "id": 499,
+    "name": "PL CREAM 500ML"
+  },
+  {
+    "id": 500,
+    "name": "PL CREAM 5KG"
+  },
+  {
+    "id": 501,
+    "name": "PROMIS 10KG"
+  },
+  {
+    "id": 502,
+    "name": "PROMISE 20KG"
+  },
+  {
+    "id": 503,
+    "name": "PROMISE 2KG"
+  },
+  {
+    "id": 504,
+    "name": "PROMISE 5KG"
+  },
+  {
+    "id": 505,
+    "name": "PST GREEN 10KG"
+  },
+  {
+    "id": 506,
+    "name": "PST GREEN 20KG"
+  },
+  {
+    "id": 507,
+    "name": "PST GREEN 2KG"
+  },
+  {
+    "id": 508,
+    "name": "PST GREEN 5KG"
+  },
+  {
+    "id": 509,
+    "name": "PT GOLD PREMIUM 1LTR"
+  },
+  {
+    "id": 510,
+    "name": "PT GOLD PREMIUM 5LTR"
+  },
+  {
+    "id": 511,
+    "name": "PU BLACK 200ML"
+  },
+  {
+    "id": 512,
+    "name": "PU BLACK 500ML"
+  },
+  {
+    "id": 513,
+    "name": "PU DAZZLING WHITE 200ML"
+  },
+  {
+    "id": 514,
+    "name": "PU DAZZLING WHITE 500ML"
+  },
+  {
+    "id": 515,
+    "name": "PU GOLD 100ML"
+  },
+  {
+    "id": 516,
+    "name": "PU GOLD 200ML"
+  },
+  {
+    "id": 517,
+    "name": "PU GOLD 500ML"
+  },
+  {
+    "id": 518,
+    "name": "PU GOLD 50ML"
+  },
+  {
+    "id": 519,
+    "name": "PU P. O RED 200ML"
+  },
+  {
+    "id": 520,
+    "name": "PU SILVER 200ML"
+  },
+  {
+    "id": 521,
+    "name": "PU SKY BLUE 200ML"
+  },
+  {
+    "id": 522,
+    "name": "PURCHASE 18%"
+  },
+  {
+    "id": 523,
+    "name": "PUREWHT 10LTR"
+  },
+  {
+    "id": 524,
+    "name": "PUREWHT 1LTR"
+  },
+  {
+    "id": 525,
+    "name": "PUREWHT 20LTR"
+  },
+  {
+    "id": 526,
+    "name": "PUREWHT 4LTR"
+  },
+  {
+    "id": 527,
+    "name": "R 800 ROLER"
+  },
+  {
+    "id": 528,
+    "name": "R800 CBRN"
+  },
+  {
+    "id": 529,
+    "name": "RAJ 24CAR GOLD 100ML"
+  },
+  {
+    "id": 530,
+    "name": "RAJ 24CAR GOLD 500ML"
+  },
+  {
+    "id": 531,
+    "name": "RAJ BLACK OIL PAINT 1LTR"
+  },
+  {
+    "id": 532,
+    "name": "RAJ DAMPROOF 20LTR"
+  },
+  {
+    "id": 533,
+    "name": "RAJ LEMON SOUFFLE 1LTR"
+  },
+  {
+    "id": 534,
+    "name": "RAJ RED OXIDE MATT 1LTR"
+  },
+  {
+    "id": 535,
+    "name": "RAJ RED OXIDE MATT 200ML"
+  },
+  {
+    "id": 536,
+    "name": "RAJ RED OXIDE MATT 500ML"
+  },
+  {
+    "id": 537,
+    "name": "RAJ SIG RED 500ML"
+  },
+  {
+    "id": 538,
+    "name": "RAJ SIG. RED 1LTR"
+  },
+  {
+    "id": 539,
+    "name": "RAJ SUNRISE 1LTR"
+  },
+  {
+    "id": 540,
+    "name": "RAJ TERRACOTTA 1LTR"
+  },
+  {
+    "id": 541,
+    "name": "RAJ TERRACOTTA 500ML"
+  },
+  {
+    "id": 542,
+    "name": "RB10 1LTR"
+  },
+  {
+    "id": 543,
+    "name": "RB10 200ML"
+  },
+  {
+    "id": 544,
+    "name": "RB13 1LTR"
+  },
+  {
+    "id": 545,
+    "name": "RB15 1LTR"
+  },
+  {
+    "id": 546,
+    "name": "RB1N 1LTR"
+  },
+  {
+    "id": 547,
+    "name": "RE33 ELEGANCE APEX HI GLS 10LTR"
+  },
+  {
+    "id": 548,
+    "name": "RE33 ELEGANCE APEX HI GLS 1LTR"
+  },
+  {
+    "id": 549,
+    "name": "RE33 ELEGANCE APEX HI GLS 20LTR"
+  },
+  {
+    "id": 550,
+    "name": "RE33 ELEGANCE APEX HI GLS 4LTR"
+  },
+  {
+    "id": 551,
+    "name": "RED COLORANT 1LTR"
+  },
+  {
+    "id": 552,
+    "name": "REDOXIDE 1LTR SPARC"
+  },
+  {
+    "id": 553,
+    "name": "REDOXIDE 20LTR SPARC"
+  },
+  {
+    "id": 554,
+    "name": "REDOXIDE 4LTR SPARC"
+  },
+  {
+    "id": 555,
+    "name": "REDOXIDE 500ML SPARC"
+  },
+  {
+    "id": 556,
+    "name": "REPAIR POLYMER 50 KG"
+  },
+  {
+    "id": 557,
+    "name": "RI22 PEARL LUSTER 10LTR"
+  },
+  {
+    "id": 558,
+    "name": "RI22 PEARL LUSTER 20LTR"
+  },
+  {
+    "id": 559,
+    "name": "RI25 REFRESH INT EMULSION 10LTR"
+  },
+  {
+    "id": 560,
+    "name": "RI25 REFRESH INT EMULSION 1LTR"
+  },
+  {
+    "id": 561,
+    "name": "RI25 REFRESH INT EMULSION 20LTR"
+  },
+  {
+    "id": 562,
+    "name": "RI25 REFRESH INT EMULSION 4LTR"
+  },
+  {
+    "id": 563,
+    "name": "RL IVORY 1LTR"
+  },
+  {
+    "id": 564,
+    "name": "RL IVORY 500ML"
+  },
+  {
+    "id": 565,
+    "name": "ROOF CLEAN 1 LTR"
+  },
+  {
+    "id": 566,
+    "name": "ROOF CLEAN 500ML"
+  },
+  {
+    "id": 567,
+    "name": "ROOF GROUT  LILLY WHITE 1KG"
+  },
+  {
+    "id": 568,
+    "name": "ROYAL PLAY COPPER 200ML"
+  },
+  {
+    "id": 569,
+    "name": "RP17 VEGA PRIMER 10 LTR"
+  },
+  {
+    "id": 570,
+    "name": "RP17 VEGA PRIMER 1LTR"
+  },
+  {
+    "id": 571,
+    "name": "RP17 VEGA PRIMER 20LTR"
+  },
+  {
+    "id": 572,
+    "name": "RP17 VEGA PRIMER 4LTR"
+  },
+  {
+    "id": 573,
+    "name": "RUBY BLUE 100GM"
+  },
+  {
+    "id": 574,
+    "name": "RUBY BLUE 200GM"
+  },
+  {
+    "id": 575,
+    "name": "RUBY BLUE 50GM"
+  },
+  {
+    "id": 576,
+    "name": "Rustic Texture Silver 25 Kg"
+  },
+  {
+    "id": 577,
+    "name": "SAGAR 1KG POUCH"
+  },
+  {
+    "id": 578,
+    "name": "SARSON 1KG POUCH"
+  },
+  {
+    "id": 579,
+    "name": "SBD WHITE SUPER BRIGHT DISTEMBER 10KG"
+  },
+  {
+    "id": 580,
+    "name": "SBD WHITE SUPER BRIGHT DISTEMBER 1KG"
+  },
+  {
+    "id": 581,
+    "name": "SBD WHITE SUPER BRIGHT DISTEMBER 20KG"
+  },
+  {
+    "id": 582,
+    "name": "SBD WHITE SUPER BRIGHT DISTEMBER 2KG"
+  },
+  {
+    "id": 583,
+    "name": "SBD WHITE SUPER BRIGHT DISTEMBER 5KG"
+  },
+  {
+    "id": 584,
+    "name": "SCHYDXTR CLEAR 1 LTR"
+  },
+  {
+    "id": 585,
+    "name": "SE2 N 1LTR"
+  },
+  {
+    "id": 586,
+    "name": "SE2 N 4LTR"
+  },
+  {
+    "id": 587,
+    "name": "SGE1 PASTEL 1LTR"
+  },
+  {
+    "id": 588,
+    "name": "SGE1 PASTEL 500ML"
+  },
+  {
+    "id": 589,
+    "name": "SGE20 BROWN 1LTR"
+  },
+  {
+    "id": 590,
+    "name": "SGE23 SM. GREY  500ML"
+  },
+  {
+    "id": 591,
+    "name": "SGE23 SM. GREY 200ML"
+  },
+  {
+    "id": 592,
+    "name": "SGE27 G BROWN 1LTR"
+  },
+  {
+    "id": 593,
+    "name": "SGE30 DEEP ORANGE 4LTR"
+  },
+  {
+    "id": 594,
+    "name": "SH1 10LTR"
+  },
+  {
+    "id": 595,
+    "name": "SH1 1LTR"
+  },
+  {
+    "id": 596,
+    "name": "SH1 20LTR"
+  },
+  {
+    "id": 597,
+    "name": "SH1 4LTR"
+  },
+  {
+    "id": 598,
+    "name": "SH13 1LTR"
+  },
+  {
+    "id": 599,
+    "name": "SH13 4LTR"
+  },
+  {
+    "id": 600,
+    "name": "SHREE POP 1KG"
+  },
+  {
+    "id": 601,
+    "name": "SHREE POP 3KG"
+  },
+  {
+    "id": 602,
+    "name": "SIG RED 100ML"
+  },
+  {
+    "id": 603,
+    "name": "SIG RED 1LTR"
+  },
+  {
+    "id": 604,
+    "name": "SIG RED 1LTR ACE SPARC"
+  },
+  {
+    "id": 605,
+    "name": "SIG RED 1LTR APEX"
+  },
+  {
+    "id": 606,
+    "name": "SIG RED 200ML"
+  },
+  {
+    "id": 607,
+    "name": "SIG RED 4LTR APEX"
+  },
+  {
+    "id": 608,
+    "name": "SIG RED 500ML"
+  },
+  {
+    "id": 609,
+    "name": "SIG RED METALIC EMULSION 500ML"
+  },
+  {
+    "id": 610,
+    "name": "SILVER METALIC EMULSION 100ML"
+  },
+  {
+    "id": 611,
+    "name": "SILVER METALIC EMULSION 1LTR"
+  },
+  {
+    "id": 612,
+    "name": "SILVER METALIC EMULSION 200ML"
+  },
+  {
+    "id": 613,
+    "name": "SILVER METALIC EMULSION 500ML"
+  },
+  {
+    "id": 614,
+    "name": "SKY BLUE 1LTR"
+  },
+  {
+    "id": 615,
+    "name": "SKY BLUE 200ML"
+  },
+  {
+    "id": 616,
+    "name": "SKY BLUE 500ML"
+  },
+  {
+    "id": 617,
+    "name": "SLEEK ONE INTERIOR GLOSSY 500ML"
+  },
+  {
+    "id": 618,
+    "name": "SM GREY 1LTR"
+  },
+  {
+    "id": 619,
+    "name": "SM GREY 200ML"
+  },
+  {
+    "id": 620,
+    "name": "SM GREY 4LTR"
+  },
+  {
+    "id": 621,
+    "name": "SM GREY 500ML"
+  },
+  {
+    "id": 622,
+    "name": "SMART CARE CRACKSEAL 360GM"
+  },
+  {
+    "id": 623,
+    "name": "SMART CARE CRACKSEAL 5KG"
+  },
+  {
+    "id": 624,
+    "name": "SMART CARE CRACKSEAL 900GM"
+  },
+  {
+    "id": 625,
+    "name": "SMARTCARE DAMPPROOF 10LTR"
+  },
+  {
+    "id": 626,
+    "name": "SMARTCARE DAMPPROOF 1LTR"
+  },
+  {
+    "id": 627,
+    "name": "SMARTCARE DAMPPROOF 20LTR"
+  },
+  {
+    "id": 628,
+    "name": "SMARTCARE DAMPPROOF 4LTR"
+  },
+  {
+    "id": 629,
+    "name": "SMARTCARE DMAPPROOF SUPREMA 20LTR"
+  },
+  {
+    "id": 630,
+    "name": "SN10 1LTR"
+  },
+  {
+    "id": 631,
+    "name": "SN10 4LTR"
+  },
+  {
+    "id": 632,
+    "name": "SN13 1LTR"
+  },
+  {
+    "id": 633,
+    "name": "SN15 1LTR"
+  },
+  {
+    "id": 634,
+    "name": "SN21 1LTR"
+  },
+  {
+    "id": 635,
+    "name": "SN21 4LTR"
+  },
+  {
+    "id": 636,
+    "name": "SN22N 1LTR"
+  },
+  {
+    "id": 637,
+    "name": "SN3 10LTR"
+  },
+  {
+    "id": 638,
+    "name": "SN3 1LTR"
+  },
+  {
+    "id": 639,
+    "name": "SN3 20LTR"
+  },
+  {
+    "id": 640,
+    "name": "SN3 4LTR"
+  },
+  {
+    "id": 641,
+    "name": "SOLVENT 200ML"
+  },
+  {
+    "id": 642,
+    "name": "SOLVENT 400ML"
+  },
+  {
+    "id": 643,
+    "name": "SOLVENT 4LTR"
+  },
+  {
+    "id": 644,
+    "name": "SOLVENT 800ML"
+  },
+  {
+    "id": 645,
+    "name": "SPECIAL WHITE COLORANT 1LTR"
+  },
+  {
+    "id": 646,
+    "name": "SPRT YELLOW 1LTR ACE SPARC"
+  },
+  {
+    "id": 647,
+    "name": "STN BLUE 1LTR"
+  },
+  {
+    "id": 648,
+    "name": "STN BLUE 500ML"
+  },
+  {
+    "id": 649,
+    "name": "SUNRISE 1LTR ACE SPARC"
+  },
+  {
+    "id": 650,
+    "name": "SUP WHITE ENAMEL 1LTR"
+  },
+  {
+    "id": 651,
+    "name": "SUPWHT 4LTR ACE SPARC"
+  },
+  {
+    "id": 652,
+    "name": "SURAJ 1KG POUCH"
+  },
+  {
+    "id": 653,
+    "name": "T SPARC JOLY HOLY 1LTR"
+  },
+  {
+    "id": 654,
+    "name": "T SPARC SUP WHITE 14LTR"
+  },
+  {
+    "id": 655,
+    "name": "T SPARC SUP WHITE 1LTR"
+  },
+  {
+    "id": 656,
+    "name": "T SPARC SUP WHITE 20LTR"
+  },
+  {
+    "id": 657,
+    "name": "T SPARC SUP WHITE 4LTR"
+  },
+  {
+    "id": 658,
+    "name": "T SPARC TERACOTA 1LTR"
+  },
+  {
+    "id": 659,
+    "name": "T SPARCSUP WHITE 10LTR"
+  },
+  {
+    "id": 660,
+    "name": "TE1 10LTR"
+  },
+  {
+    "id": 661,
+    "name": "TE1 20LTR"
+  },
+  {
+    "id": 662,
+    "name": "TE1 4LTR"
+  },
+  {
+    "id": 663,
+    "name": "TE13 1LTR"
+  },
+  {
+    "id": 664,
+    "name": "TE13 4LTR"
+  },
+  {
+    "id": 665,
+    "name": "TE15 1LTR"
+  },
+  {
+    "id": 666,
+    "name": "TE15 4LTR"
+  },
+  {
+    "id": 667,
+    "name": "TE22 1LTR"
+  },
+  {
+    "id": 668,
+    "name": "TE22 4LTR"
+  },
+  {
+    "id": 669,
+    "name": "TE3 10LTR"
+  },
+  {
+    "id": 670,
+    "name": "TE3 1LTR"
+  },
+  {
+    "id": 671,
+    "name": "TE3 20LTR"
+  },
+  {
+    "id": 672,
+    "name": "TE3 4LTR"
+  },
+  {
+    "id": 673,
+    "name": "TERACOTA 1LTR ACE SPARC"
+  },
+  {
+    "id": 674,
+    "name": "TERMINATOR WOOD 100ML"
+  },
+  {
+    "id": 675,
+    "name": "TERMINATOR WOOD 1LTR"
+  },
+  {
+    "id": 676,
+    "name": "TERMINATOR WOOD 250ML"
+  },
+  {
+    "id": 677,
+    "name": "TERMINATOR WOOD 500ML"
+  },
+  {
+    "id": 678,
+    "name": "TERMINATOR WOOD SPARY 500ML"
+  },
+  {
+    "id": 679,
+    "name": "TERRACOTA 1LTR FLOOR COAT"
+  },
+  {
+    "id": 680,
+    "name": "TL WHITE ONE TRUE LOOK 10LTR"
+  },
+  {
+    "id": 681,
+    "name": "TL1 ONE TRUE LOOK 10LTR"
+  },
+  {
+    "id": 682,
+    "name": "TL1 ONE TRUE LOOK 1LTR"
+  },
+  {
+    "id": 683,
+    "name": "TL1 ONE TRUE LOOK 4LTR"
+  },
+  {
+    "id": 684,
+    "name": "TL2 ONE TRUE LOOK 1LTR"
+  },
+  {
+    "id": 685,
+    "name": "TL2 ONE TRUE LOOK 4 LIT"
+  },
+  {
+    "id": 686,
+    "name": "TL99 ONE TRUE LOOK 1 LTR"
+  },
+  {
+    "id": 687,
+    "name": "TL99 ONE TRUE LOOK 4 LTR"
+  },
+  {
+    "id": 688,
+    "name": "TRK BROWN 1LTR"
+  },
+  {
+    "id": 689,
+    "name": "TRK BROWN 4LTR"
+  },
+  {
+    "id": 690,
+    "name": "TRK BROWN 500ML"
+  },
+  {
+    "id": 691,
+    "name": "TRU REDOXIDE 1LTR"
+  },
+  {
+    "id": 692,
+    "name": "TRU REDOXIDE 500ML"
+  },
+  {
+    "id": 693,
+    "name": "TRU SPARC EXT WALL PRIMER 10LTR"
+  },
+  {
+    "id": 694,
+    "name": "TRU SPARC INT WALL PRIMER 1LTR"
+  },
+  {
+    "id": 695,
+    "name": "TRU WOOD PRIMER 1LTR"
+  },
+  {
+    "id": 696,
+    "name": "TRU WOOD PRIMER 4LTR"
+  },
+  {
+    "id": 697,
+    "name": "TRU WOOD PRIMER 500ML"
+  },
+  {
+    "id": 698,
+    "name": "TRUCARE WALL PUTTY WHITE 40KG"
+  },
+  {
+    "id": 699,
+    "name": "TS WHITE 10LTR"
+  },
+  {
+    "id": 700,
+    "name": "TS WHITE 1LTR"
+  },
+  {
+    "id": 701,
+    "name": "TS WHITE 20LTR"
+  },
+  {
+    "id": 702,
+    "name": "TS WHITE 4LTR"
+  },
+  {
+    "id": 703,
+    "name": "TUR EXT WALL PRIMER WHT 1LTR"
+  },
+  {
+    "id": 704,
+    "name": "TUR EXT WALL PRIMER WHT 4LTR"
+  },
+  {
+    "id": 705,
+    "name": "TUR INT WALL PRIMER WHT 10LTR"
+  },
+  {
+    "id": 706,
+    "name": "TUR INT WALL PRIMER WHT 1LTR"
+  },
+  {
+    "id": 707,
+    "name": "TUR INT WALL PRIMER WHT 20LTR"
+  },
+  {
+    "id": 708,
+    "name": "TUR INT WALL PRIMER WHT 4LTR"
+  },
+  {
+    "id": 709,
+    "name": "UD1 10KG"
+  },
+  {
+    "id": 710,
+    "name": "UD1 20KG"
+  },
+  {
+    "id": 711,
+    "name": "UD1 2KG"
+  },
+  {
+    "id": 712,
+    "name": "UD1 5KG"
+  },
+  {
+    "id": 713,
+    "name": "VIOLET COLORANT 1LTR"
+  },
+  {
+    "id": 714,
+    "name": "W115 W5 BRUSH"
+  },
+  {
+    "id": 715,
+    "name": "WHITE COLORANT 1LTR"
+  },
+  {
+    "id": 716,
+    "name": "WILD LILAC 1LTR"
+  },
+  {
+    "id": 717,
+    "name": "WILD LILAC 500ML"
+  },
+  {
+    "id": 718,
+    "name": "WILD LILIAC 20KG"
+  },
+  {
+    "id": 719,
+    "name": "WILD LILIC 10KG"
+  },
+  {
+    "id": 720,
+    "name": "WILD PURPLE 1LTR"
+  },
+  {
+    "id": 721,
+    "name": "WILD PURPLE 500ML"
+  },
+  {
+    "id": 722,
+    "name": "WILDLILIC 5KG"
+  },
+  {
+    "id": 723,
+    "name": "WIRE BRUSH BL"
+  },
+  {
+    "id": 724,
+    "name": "WT BLACK 1LTR"
+  },
+  {
+    "id": 725,
+    "name": "WT MARGENTA 1LTR"
+  },
+  {
+    "id": 726,
+    "name": "WT ORANGE  1LTR"
+  },
+  {
+    "id": 727,
+    "name": "WT WHITE 1LTR"
+  },
+  {
+    "id": 728,
+    "name": "XT WHITE 20KG"
+  },
+  {
+    "id": 729,
+    "name": "YELLOW COLORANT 1LTR"
+  },
+  {
+    "id": 730,
+    "name": "YELLOW OXIDE COLORANT 1LTR"
+  },
+  {
+    "id": 731,
+    "name": "YOX COLORANT 1LTR"
+  }
+]
