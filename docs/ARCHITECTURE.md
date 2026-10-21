@@ -2,9 +2,11 @@
 
 ## Technology
 
-The UI uses React 19 and TypeScript. Vinext provides Next.js App Router-compatible pages and API routes, with Vite builds. Styling is primarily custom CSS with Tailwind imported; icons use Lucide React. The server runs in Cloudflare Workers. D1 provides SQLite-compatible durable storage. Drizzle defines the schema and generates migrations; request handlers execute parameterized SQL directly through the D1 binding.
+The UI uses React 19 and TypeScript with Next.js App Router. Vercel runs the Node.js API routes. They call Cloudflare D1's HTTPS query endpoint from the server through `db/d1-http.ts`. Styling, product IDs, quantities, optimistic version checks and backup format are unchanged.
 
-Node.js is a development/build/test dependency, not a separate production Express server. Starter dependencies that are installed but not used by the app are not part of the implemented feature set.
+The three Cloudflare environment variables are read lazily in `db/index.ts`, which is guarded by `server-only`. The API token never enters the browser bundle. The transport uses parameterized queries, disables caching and redirects, times out each query after 10 seconds, and does not automatically replay failed writes. Existing route-level IDs and version checks make user-initiated retries safe. API errors yield 503 rather than a successful empty or zero-stock response.
+
+Drizzle still describes the schema; request handlers execute SQL through the REST adapter. Builds do not run migrations. Cloudflare's REST API has global API rate limits in addition to D1 quotas; a Worker API is the preferred future path if usage grows. Legacy Sites/Vinext tooling remains in the repo but is not used by the Vercel build.
 
 ## Data model
 
@@ -45,6 +47,6 @@ Local storage failure is shown to the operator and does not prevent cloud saving
 
 ## Access and deployment
 
-The live deployment currently relies on owner-private Sites access. There is no custom authentication form. Origin checks help reject browser cross-site writes but are not authentication. Do not expose these write endpoints on an independently public server without adding an access boundary.
+The original hosted Site uses owner-private Sites access. That boundary does not transfer to Vercel. This application has no custom login, and Origin checks are not authentication. Protect the Vercel deployment before connecting real shop data. Without protection, anyone able to reach its APIs can read or change quantities. See `VERCEL.md`.
 
-The source repository contains the catalogue and code, not the live stock database. Updating GitHub does not by itself deploy the app. Production migrations are applied by Sites; local database migration commands operate on a separate local database.
+Source control contains the catalogue, not live counts. A new D1 database is empty until quantities are saved or explicitly restored from a downloaded backup. Changing domains creates a separate browser-local storage area; export the original backup before moving. Never reset or recreate the original database to migrate hosting.

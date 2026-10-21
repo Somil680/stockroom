@@ -1,3 +1,4 @@
+import { testClient } from "./d1-test-client.mjs";
 import { DatabaseSync } from 'node:sqlite';
 import { readFileSync } from 'node:fs';
 import ts from 'typescript';
@@ -28,8 +29,8 @@ fakeStorage.set(helpers.SNAPSHOT_KEY, '{}'); assert.throws(() => helpers.readSna
 assert.equal(helpers.mergeConfirmed([{ ...zero[0], quantity: 10, version: 2 }], [{ ...zero[0], quantity: 5, version: 1 }])[0].quantity, 10);
 const database = new DatabaseSync(':memory:');
 database.exec(readFileSync('drizzle/0000_red_northstar.sql', 'utf8'));
-globalThis.__stockTestEnv = { DB: { prepare(sql) { let params = []; return { bind(...p) { params = p; return this; }, async first() { return database.prepare(sql).get(...params) ?? null; }, async all() { return { results: database.prepare(sql).all(...params) }; } }; } } };
-const restoreSource = readFileSync('app/api/stock/restore/route.ts', 'utf8').replace('import { env } from "cloudflare:workers";', 'const env = globalThis.__stockTestEnv;').replace('"@/lib/backup"', JSON.stringify(backupURL));
+globalThis.__stockTestEnv = { DB: testClient(database) };
+const restoreSource = readFileSync('app/api/stock/restore/route.ts', 'utf8').replace('import { getDb } from "@/db";', 'const getDb = () => globalThis.__stockTestEnv.DB;').replace('"@/lib/backup"', JSON.stringify(backupURL));
 const { POST } = await import(moduleURL(restoreSource));
 function current() { const byId = new Map(database.prepare('SELECT * FROM stock').all().map(p => [p.product_id, p])); return zero.map(p => ({ ...p, quantity: byId.get(p.id)?.quantity ?? 0, version: byId.get(p.id)?.version ?? 0 })); }
 const send = (backup, expected, mutationId = 'restore-test-00000000', origin = 'https://shop.test') => POST(new Request('https://shop.test/api/stock/restore', { method: 'POST', headers: { 'Content-Type': 'application/json', origin }, body: JSON.stringify({ backup, expected, mutationId }) }));

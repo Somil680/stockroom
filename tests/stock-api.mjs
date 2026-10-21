@@ -1,11 +1,12 @@
+import { testClient } from "./d1-test-client.mjs";
 import { DatabaseSync } from 'node:sqlite';
 import { readFileSync } from 'node:fs';
 import ts from 'typescript';
 import assert from 'node:assert/strict';
 const database = new DatabaseSync(':memory:');
 database.exec(readFileSync('drizzle/0000_red_northstar.sql', 'utf8'));
-globalThis.__stockTestEnv = { DB: { prepare(sql) { let params = []; return { bind(...p) { params = p; return this; }, async first() { return database.prepare(sql).get(...params) ?? null; }, async all() { return { results: database.prepare(sql).all(...params) }; } }; } } };
-const source = readFileSync('app/api/stock/route.ts', 'utf8').replace('import { env } from "cloudflare:workers";', 'const env = globalThis.__stockTestEnv;').replace('import products from "@/data/products.json";', `const products = ${readFileSync('data/products.json', 'utf8')};`);
+globalThis.__stockTestEnv = { DB: testClient(database) };
+const source = readFileSync('app/api/stock/route.ts', 'utf8').replace('import { getDb } from "@/db";', 'const getDb = () => globalThis.__stockTestEnv.DB;').replace('import products from "@/data/products.json";', `const products = ${readFileSync('data/products.json', 'utf8')};`);
 const compiled = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2022 } }).outputText;
 const { GET, PATCH } = await import('data:text/javascript;base64,' + Buffer.from(compiled).toString('base64'));
 const send = (body, origin = 'https://shop.test') => PATCH(new Request('https://shop.test/api/stock', { method: 'PATCH', headers: { 'Content-Type': 'application/json', origin }, body: JSON.stringify(body) }));

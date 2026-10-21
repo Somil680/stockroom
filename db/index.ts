@@ -1,13 +1,11 @@
-import { env } from "cloudflare:workers";
-import { drizzle } from "drizzle-orm/d1";
-import * as schema from "./schema";
+import "server-only";
+import { createD1Client } from "./d1-http";
 
+// Read secrets lazily: builds need no live database or Cloudflare credentials.
 export function getDb() {
-  if (!env.DB) {
-    throw new Error(
-      "Cloudflare D1 binding `DB` is unavailable. Set the `d1` field in .openai/hosting.json to `DB` or let your control plane inject the real binding values before using the database."
-    );
-  }
-
-  return drizzle(env.DB, { schema });
+  return createD1Client({
+    accountId: process.env.CLOUDFLARE_ACCOUNT_ID,
+    databaseId: process.env.CLOUDFLARE_D1_DATABASE_ID,
+    apiToken: process.env.CLOUDFLARE_API_TOKEN,
+  });
 }

@@ -15,50 +15,34 @@ A mobile-friendly shared counter for a small paint and hardware shop. Includes 7
 
 No monthly reset, inactivity deletion job, TTL, operator history or login form is implemented. The currently published Site is owner-private and uses the hosting platform's access boundary. GitHub publication alone does not change hosting or make the app public.
 
-## Step 1 — Install locally
+## Deploy manually on Vercel
 
-Use Node.js 24 (the test suite uses Node's built-in SQLite module) and the pnpm version declared in `package.json`.
+This GitHub version now uses **Next.js on Vercel + Cloudflare D1 over the server-side REST API**. The existing Sites-hosted app remains a separate deployment. Follow [the mobile-friendly deployment guide](docs/VERCEL.md).
+
+Copy [`.env.example`](.env.example) to `.env.local` for local development, or enter its three keys in Vercel. Real credentials are intentionally absent. No `NEXT_PUBLIC_` keys are needed.
+
+## Local development and checks
+
+Use Node.js 24 and the pnpm version declared in `package.json`.
 
 ```sh
 corepack enable
 pnpm install --frozen-lockfile
-```
-
-A clean clone defaults to the portable execution profile. Development does not require production database credentials. Do not copy the ignored `.sites-runtime`, `.wrangler`, backups or environment files into source control.
-
-## Step 2 — Prepare a local database
-
-Build to generate the local Worker configuration:
-
-```sh
-pnpm build
-```
-
-For a new local database, apply the initial schema once:
-
-```sh
-node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0000_red_northstar.sql
-```
-
-This affects local development only. Do not replay the migration against an existing database. Future schema changes require new migrations; never rewrite already-applied migrations.
-
-## Step 3 — Start the app
-
-```sh
+cp .env.example .env.local
+# Fill .env.local with credentials for a separate test D1 database.
 pnpm dev
 ```
 
-Open the local URL printed in the terminal. For a built local Worker, use `pnpm start`. The local database is separate from the live shop database.
-
-## Step 4 — Check the code
+Create the schema in that test database before counting. Local development uses the configured remote D1 database; it is not a local SQLite instance. Never point local or Preview environments at shop production data.
 
 ```sh
 pnpm typecheck
 pnpm test
 pnpm build
+pnpm start
 ```
 
-Tests execute the API handlers against an in-memory SQLite database through a small D1 adapter. They cover quantity validation, durable writes, repeated requests, stale-version conflicts, backup validation, storage failures and all-731-product atomic restores. They do not replace an end-to-end browser test or Cloudflare runtime test.
+Builds require no credentials and do not initialize or modify any database. Tests exercise real route SQL against in-memory SQLite through the HTTP adapter with a simulated Cloudflare response. They cover all 731 products, saves, retries, conflicts, full atomic restores, transport errors and invalid configuration. They do not replace a real D1/Vercel smoke test.
 
 ## Step 5 — Count and back up
 
@@ -83,11 +67,9 @@ Local storage is specific to a browser and site origin. Clearing site data, chan
 
 The file must contain exactly this catalogue's 731 unique product IDs and matching names, valid whole quantities, a timestamp and the supported format version. Backup file versions are never copied into the live database: the current database versions are used for concurrency checks.
 
-## Step 7 — Publish and maintain
+## Deployment and maintenance
 
-The current hosting workflow is ChatGPT Sites with a Cloudflare Worker and D1 binding named `DB`. `.openai/hosting.json` identifies the existing deployment. Use the Sites source-sync/build/deploy workflow to update that Site while preserving the existing database and audience.
-
-Running this project on your own Cloudflare account requires your own Worker deployment configuration and D1 binding/migration setup. The Sites manifest is not a ready-made standalone Cloudflare deployment command. Before making any independently hosted copy public, configure appropriate access controls for the write endpoints.
+See [docs/VERCEL.md](docs/VERCEL.md) for D1 creation, schema setup, API token permissions, Vercel settings, access protection and transferring an existing backup. The legacy Sites/Vinext build sources are retained for reference but are not used by `pnpm build` in this version. Do not use this GitHub branch to redeploy the original Site without restoring its binding-based server adapter and build scripts.
 
 No provider is promised to offer perpetual uptime or unlimited retention. Downloaded backups protect the count independently of hosting access. This app does not issue artificial keep-alive requests while closed.
 
@@ -101,9 +83,10 @@ No provider is promised to offer perpetual uptime or unlimited retention. Downlo
 | `app/api/stock/restore/route.ts` | Atomic, version-checked restore |
 | `lib/backup.ts` | Backup schema, validation and storage helpers |
 | `data/products.json` | Stable product IDs and exact names |
+| `db/d1-http.ts` | Server-side D1 REST transport |
 | `db/schema.ts` | Drizzle schema for the stock table |
 | `drizzle/` | Immutable database migrations |
 | `tests/` | Backend and recovery tests |
 | `docs/ARCHITECTURE.md` | Technology and data-flow notes |
 
-Live quantities and downloaded backups are not part of Git. Keep the source repository private because it contains the shop's product catalogue. Never commit access tokens, environment secrets or service-account keys.
+Live quantities and downloaded backups are not part of Git. The source repository is public and includes the product catalogue. Never commit access tokens, environment secrets or service-account keys.

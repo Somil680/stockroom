@@ -1,11 +1,12 @@
-import { env } from "cloudflare:workers";
+import { getDb } from "@/db";
 import products from "@/data/products.json";
 
 export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
 const ids = new Set(products.map(p => p.id));
 const headers = { "Cache-Control": "no-store" };
 type Row = { product_id: number; quantity: number; version: number; mutation_id: string };
-function db() { if (!env.DB) throw new Error("Database unavailable"); return env.DB; }
+const db = getDb;
 
 export async function GET() {
   try {
