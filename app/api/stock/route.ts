@@ -1,4 +1,4 @@
-import { getDb } from "@/db";
+import { getDb, databaseFailure } from "@/db";
 import products from "@/data/products.json";
 
 export const dynamic = "force-dynamic";
@@ -13,7 +13,7 @@ export async function GET() {
     const { results } = await db().prepare("SELECT product_id, quantity, version FROM stock").all<Row>();
     const rows = new Map(results.map(r => [r.product_id, r]));
     return Response.json(products.map(p => ({ ...p, quantity: rows.get(p.id)?.quantity ?? 0, version: rows.get(p.id)?.version ?? 0 })), { headers });
-  } catch { return Response.json({ error: "Unable to load stock. Please retry." }, { status: 503, headers }); }
+  } catch (error) { return Response.json(databaseFailure(error), { status: 503, headers }); }
 }
 
 export async function PATCH(request: Request) {
@@ -36,5 +36,5 @@ export async function PATCH(request: Request) {
     const current = await db().prepare("SELECT product_id, quantity, version, mutation_id FROM stock WHERE product_id = ?").bind(id).first<Row>();
     if (current?.mutation_id === mutationId) return Response.json({ quantity: current.quantity, version: current.version }, { headers });
     return Response.json({ error: "Stock changed on another device.", current: { quantity: current?.quantity ?? 0, version: current?.version ?? 0 } }, { status: 409, headers });
-  } catch { return Response.json({ error: "Not saved. Check your connection and retry." }, { status: 503, headers }); }
+  } catch (error) { return Response.json({ ...databaseFailure(error), error: "Save could not be confirmed. Refresh stock before retrying." }, { status: 503, headers }); }
 }

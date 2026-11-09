@@ -1,4 +1,4 @@
-import { getDb } from "@/db";
+import { getDb, databaseFailure } from "@/db";
 import { MAX_BACKUP_BYTES, validateBackup, validateProducts } from "@/lib/backup";
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
@@ -39,5 +39,5 @@ export async function POST(request: Request) {
     // A retry after a lost response is successful if the requested data is already present.
     if (backup.products.every(p => p.quantity === (quantities.get(p.id) ?? 0))) return Response.json({ restored: 0, alreadyApplied: true }, { headers });
     return Response.json({ error: "Stock changed since this preview. No changes were restored. Refresh and review again." }, { status: 409, headers });
-  } catch { return Response.json({ error: "Restore could not be confirmed. Refresh stock before retrying; keep your backup file." }, { status: 503, headers }); }
+  } catch (error) { return Response.json({ ...databaseFailure(error), error: "Restore could not be confirmed. Refresh stock before retrying; keep your backup file." }, { status: 503, headers }); }
 }

@@ -1,12 +1,12 @@
-import { testClient } from "./d1-test-client.mjs";
+import { testClient, databaseFailure, D1Error } from "./d1-test-client.mjs";
 import { DatabaseSync } from 'node:sqlite';
 import { readFileSync } from 'node:fs';
 import ts from 'typescript';
 import assert from 'node:assert/strict';
 const database = new DatabaseSync(':memory:');
 database.exec(readFileSync('drizzle/0000_red_northstar.sql', 'utf8'));
-globalThis.__stockTestEnv = { DB: testClient(database) };
-const source = readFileSync('app/api/stock/route.ts', 'utf8').replace('import { getDb } from "@/db";', 'const getDb = () => globalThis.__stockTestEnv.DB;').replace('import products from "@/data/products.json";', `const products = ${readFileSync('data/products.json', 'utf8')};`);
+globalThis.__stockTestEnv = { DB: testClient(database), databaseFailure };
+const source = readFileSync('app/api/stock/route.ts', 'utf8').replace('import { getDb, databaseFailure } from "@/db";', 'const getDb = () => globalThis.__stockTestEnv.DB; const databaseFailure = globalThis.__stockTestEnv.databaseFailure;').replace('import products from "@/data/products.json";', `const products = ${readFileSync('data/products.json', 'utf8')};`);
 const compiled = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2022 } }).outputText;
 const { GET, PATCH } = await import('data:text/javascript;base64,' + Buffer.from(compiled).toString('base64'));
 const send = (body, origin = 'https://shop.test') => PATCH(new Request('https://shop.test/api/stock', { method: 'PATCH', headers: { 'Content-Type': 'application/json', origin }, body: JSON.stringify(body) }));
@@ -25,5 +25,15 @@ for (const quantity of [-1, 0.5, 1000000, '3', null]) assert.equal((await send({
 assert.equal((await send({ id: 9999, quantity: 1, version: 0, mutationId: 'invalid-id-0000000000' })).status, 400);
 assert.equal((await send({ id: 2, quantity: 1, version: 0, mutationId: 'cross-origin-00000000' }, 'https://other.test')).status, 403);
 const acrossDevice = await (await GET()).json(); assert.equal(acrossDevice[0].version, version); assert.ok(acrossDevice.every(p => p.quantity === 0));
+// A failed D1 read must return a diagnostic, never a zero-filled stock list.
+const previousError = console.error;
+console.error = () => {};
+try {
+  globalThis.__stockTestEnv.DB = { prepare() { throw new D1Error('D1_SCHEMA', 400); } };
+  const failed = await GET();
+  assert.equal(failed.status, 503);
+  assert.equal(failed.headers.get('Cache-Control'), 'no-store');
+  assert.equal((await failed.json()).code, 'D1_SCHEMA');
+} finally { console.error = previousError; }
 database.close(); delete globalThis.__stockTestEnv;
 console.log('PASS: 731 zero-initialized products; increment, decrement, direct entry, persistence, retries, conflicts and invalid input.');

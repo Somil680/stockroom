@@ -9,3 +9,5 @@ export function getDb() {
     apiToken: process.env.CLOUDFLARE_API_TOKEN,
   });
 }
+
+export { databaseFailure } from "./d1-http";

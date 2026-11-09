@@ -44,9 +44,16 @@ export default function Home() {
     if (lockedRef.current) return;
     const startedAt = generation.current;
     if (manual) setRefreshing(true);
+    let failureDetail = "";
     try {
       const response = await fetch("/api/stock", { cache: "no-store", signal: AbortSignal.timeout(15000) });
-      if (!response.ok) throw new Error("Couldn’t load stock. Please try again.");
+      if (!response.ok) {
+        const failure = await response.json().catch(() => null) as { code?: unknown; error?: unknown } | null;
+        if (typeof failure?.code === "string" && /^D1_[A-Z_]+$/.test(failure.code) && typeof failure?.error === "string") {
+          failureDetail = `${failure.error.slice(0, 300)} (${failure.code}) `;
+        }
+        throw new Error("Couldn’t load stock.");
+      }
       const data = validateProducts(await response.json());
       if (!alive.current || lockedRef.current || generation.current !== startedAt) return;
       if (checkingCache.current) {
@@ -60,7 +67,7 @@ export default function Home() {
       storeConfirmed(confirmed);
       applyProducts(old => confirmed.map(p => pending.current.has(p.id) ? (old.find(o => o.id === p.id) ?? p) : p));
       if (alive.current) { setLoadError(""); setCloudReady(true); }
-    } catch { if (alive.current && generation.current === startedAt) { setCloudReady(false); setLoadError("Cloud is unavailable. Showing the last available count; no quantities were reset. Retry to continue counting."); } }
+    } catch { if (alive.current && generation.current === startedAt) { setCloudReady(false); setLoadError(failureDetail + "Cloud is unavailable. Any saved local count is read-only; no quantities were reset. Retry to continue counting."); } }
     finally { if (alive.current) { setLoading(false); setRefreshing(false); } }
   }
   async function save(id: number) {

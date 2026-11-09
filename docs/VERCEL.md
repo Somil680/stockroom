@@ -82,3 +82,19 @@ Official references:
 - https://developers.cloudflare.com/d1/tutorials/build-an-api-to-access-d1/
 - https://vercel.com/docs/environment-variables
 - https://vercel.com/docs/plans/hobby
+
+
+### Diagnosing a cloud connection failure
+
+Open `/api/stock` on the production domain. A successful response contains all 731 products. On failure, the API returns HTTP 503 with a safe `code`; the counting screen shows the same diagnostic. No upstream messages, credentials or stock values are logged.
+
+| Code | What to check |
+| --- | --- |
+| `D1_ACCOUNT_CONFIG` / `D1_DATABASE_CONFIG` / `D1_TOKEN_CONFIG` | The named variable in the deployment's environment; redeploy after changing it. Leading/trailing whitespace is trimmed automatically. |
+| `D1_AUTH` | API token validity, D1 Edit permission, and its account scope. |
+| `D1_NOT_FOUND` | Account ID and database UUID must refer to the same Cloudflare account. |
+| `D1_SCHEMA` | Run `PRAGMA table_info(stock);` in the configured D1 database. It must have `product_id`, `quantity`, `version`, and `mutation_id`, as defined in the migration above. Preserve existing quantities. |
+| `D1_RATE_LIMIT` / `D1_TIMEOUT` / `D1_NETWORK` | Retry after the temporary service/network issue resolves. |
+| `D1_QUERY` / `D1_RESPONSE` / `D1_UNKNOWN` | Inspect Vercel function logs and Cloudflare service status. Logs include only an allowlisted error code and upstream HTTP status. |
+
+An unavailable database never produces a successful zero-filled response. The existing confirmed local snapshot stays read-only until cloud access recovers. Save/restore errors keep their ambiguous-outcome warning because a write may have committed before a response was lost.
