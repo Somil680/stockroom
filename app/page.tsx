@@ -177,11 +177,10 @@ export default function Home() {
   const errors = [...pending.current.values()].some(p => p.status === "error" || p.status === "conflict");
   const readOnly = !online || !cloudReady || locked;
   return <div className="app-shell">
-    <header className="topbar"><div className="topbar-inner"><a className="brand" href="/" aria-label="Stockroom home"><span className="brand-icon"><Box size={23}/></span><span>stockroom<span className="brand-dot">.</span></span></a><div className="shop-label"><span className="live-dot"/> YOUR SHOP</div></div></header>
+    <header className="topbar"><div className="topbar-inner"><a className="brand" href="/" aria-label="Stockroom home"><span className="brand-icon"><Box size={23}/></span><span>stockroom<span className="brand-dot">.</span></span></a><div className="header-actions"><a className="backup-shortcut" href="#stock-backups">Backups</a><div className="shop-label"><span className="live-dot"/> YOUR SHOP</div></div></div></header>
     <main>
       <section className="intro"><div><div className="eyebrow">KEEP EVERY PIECE IN CHECK</div><h1>Stock counter<span>.</span></h1><p>A quick count. Everything in its place.</p></div><div className={"sync-pill " + (!online || errors || loadError ? "warning" : "")} role="status">{!online ? <WifiOff size={15}/> : unsaved && !errors ? <LoaderCircle size={15} className="spin"/> : errors || loadError ? <CircleAlert size={15}/> : <CheckCheck size={16}/>}<span>{loading ? "Loading stock" : !online ? "Offline · read only" : locked ? "Updating stock…" : errors ? "Changes need attention" : unsaved ? "Saving changes…" : !cloudReady ? "Saved copy · read only" : "All changes saved"}</span></div></section>
       <section className="overview" aria-label="Stock overview"><div><span className="stat-label">Products</span><strong>{loading ? "—" : products.length.toLocaleString()}<small>in your catalogue</small></strong></div><div><span className="stat-label">Total pieces</span><strong>{loading ? "—" : total.toLocaleString()}<small>current stock</small></strong></div><div className="third-stat"><span className="stat-label">Products in stock</span><strong>{loading ? "—" : inStock.toLocaleString()}<small>with quantity above zero</small></strong></div><span className="overview-icon" aria-hidden="true"><Package size={48} strokeWidth={1}/></span></section>
-      <BackupPanel snapshot={snapshot} localSavedAt={localSavedAt} storageError={storageError} canRestore={online && !locked} busy={unsaved > 0} onReview={reviewBackup} onRestore={restoreBackup} onReviewEnd={endReview}/>
       <section className="workspace">
         <div className="workspace-heading"><div className="tabs" role="tablist" aria-label="View"><button role="tab" aria-selected={view === "count"} className={view === "count" ? "active" : ""} onClick={() => setView("count")}>Count stock</button><button role="tab" aria-selected={view === "products"} className={view === "products" ? "active" : ""} onClick={() => setView("products")}>Products</button></div><span className="unit-label">UNIT <b>Pieces</b></span></div>
         <AddProduct disabled={readOnly || unsaved > 0} onAdd={addProduct}/>
@@ -199,7 +198,11 @@ export default function Home() {
           </article>;
         })}</div>}
         <div className="list-footer"><span>{visible.length} of {products.length} products</span><span><Check size={13}/> Quantities auto-save</span></div>
-      </section><footer className="footer"><span>Small counts. A clearer shop.</span><span>Stockroom <span className="brand-dot">●</span></span></footer>
+      </section>
+      <footer className="footer" id="stock-backups">
+      <BackupPanel snapshot={snapshot} localSavedAt={localSavedAt} storageError={storageError} canRestore={online && !locked} busy={unsaved > 0} onReview={reviewBackup} onRestore={restoreBackup} onReviewEnd={endReview}/>
+        <div className="footer-credits"><span>Small counts. A clearer shop.</span><span>Stockroom <span className="brand-dot">●</span></span></div>
+      </footer>
     </main>
   </div>;
 }
