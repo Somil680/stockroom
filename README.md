@@ -5,6 +5,7 @@ A mobile-friendly shared counter for a small paint and hardware shop. Includes 7
 ## What it does
 
 - Product search, product catalogue and counting views.
+- Add products by name, starting at 0 pieces, shared across devices with duplicate-name and retry protection.
 - Increment/decrement by one or enter a whole quantity directly (0–999999 pieces).
 - Auto-save after a 350 ms pause, with saving, retry and conflict states.
 - Shared stock in Cloudflare D1. Visible pages refresh every 10 seconds and when returning to the app.
@@ -65,7 +66,7 @@ Local storage is specific to a browser and site origin. Clearing site data, chan
 5. The server applies the restore in one SQL statement only if all previewed stock versions still match.
 6. If a conflict occurs, close the preview, refresh and review again. Do not assume an interrupted request failed; refresh the cloud stock before retrying.
 
-The file must contain exactly this catalogue's 731 unique product IDs and matching names, valid whole quantities, a timestamp and the supported format version. Backup file versions are never copied into the live database: the current database versions are used for concurrency checks.
+The file must contain all 731 original product IDs and matching names, plus any custom products included when the backup was created, valid whole quantities, a timestamp and the supported format version. Older backups leave products added later unchanged. Custom products in a restore must already exist in the current catalogue; unknown IDs or mismatched names block the restore. Backup file versions are never copied into the live database: the current database versions are used for concurrency checks.
 
 ## Deployment and maintenance
 

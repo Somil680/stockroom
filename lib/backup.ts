@@ -8,15 +8,16 @@ export const MAX_BACKUP_BYTES = 2_000_000;
 const names = new Map(catalogue.map(p => [p.id, p.name]));
 
 export function validateProducts(value: unknown): Product[] {
-  if (!Array.isArray(value) || value.length !== catalogue.length) throw new Error(`Backup must contain all ${catalogue.length} products.`);
+  if (!Array.isArray(value) || value.length < catalogue.length) throw new Error(`Backup must contain all ${catalogue.length} products.`);
   const seen = new Set<number>();
   const rows = value.map(p => {
-    if (!p || typeof p !== "object" || !Number.isSafeInteger(p.id) || seen.has(p.id) || names.get(p.id) !== p.name) throw new Error("Product IDs or names do not match this shop’s catalogue.");
+    if (!p || typeof p !== "object" || !Number.isSafeInteger(p.id) || seen.has(p.id) || (names.has(p.id) ? names.get(p.id) !== p.name : p.id < 1000000 || typeof p.name !== "string" || !p.name.trim() || p.name.length > 160)) throw new Error("Product IDs or names do not match this shop’s catalogue.");
     if (!Number.isSafeInteger(p.quantity) || p.quantity < 0 || p.quantity > 999999) throw new Error("Quantities must be whole numbers from 0 to 999999.");
     if (!Number.isSafeInteger(p.version) || p.version < 0) throw new Error("Invalid stock version in backup.");
     seen.add(p.id);
     return { id: p.id, name: p.name, quantity: p.quantity, version: p.version };
   });
+  if (catalogue.some(p => !seen.has(p.id))) throw new Error("Backup is missing original catalogue products.");
   return rows.sort((a, b) => a.id - b.id);
 }
 

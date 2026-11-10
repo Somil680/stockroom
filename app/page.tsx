@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { Box, Check, CheckCheck, CircleAlert, LoaderCircle, Minus, Package, Plus, RefreshCw, Search, WifiOff, X } from "lucide-react";
+import { AddProduct } from "@/components/add-product";
 import { BackupPanel } from "@/components/backup-panel";
 import { createBackup, mergeConfirmed, readSnapshot, validateProducts, writeSnapshot, type Product, type StockBackup } from "@/lib/backup";
 type Pending = { desired: number; version: number; status: "waiting" | "saving" | "error" | "conflict"; mutationId?: string; sent?: number; current?: { quantity: number; version: number } };
@@ -58,7 +59,7 @@ export default function Home() {
       if (!alive.current || lockedRef.current || generation.current !== startedAt) return;
       if (checkingCache.current) {
         const server = new Map(data.map(p => [p.id, p]));
-        if (confirmedRef.current.some(p => p.version > (server.get(p.id)?.version ?? 0))) {
+        if (confirmedRef.current.some(p => !server.has(p.id) || p.version > (server.get(p.id)?.version ?? 0))) {
           setCloudReady(false); setLoadError("Cloud stock is older than this device’s saved copy. Download your backup, then use Restore to review recovery."); return;
         }
         checkingCache.current = false;
@@ -137,6 +138,19 @@ export default function Home() {
     const interval = setInterval(focus, 10000);
     return () => { alive.current = false; clearInterval(interval); window.removeEventListener("online", connection); window.removeEventListener("offline", connection); document.removeEventListener("visibilitychange", focus); window.removeEventListener("beforeunload", unload); for (const t of timers.current.values()) clearTimeout(t); };
   }, []);
+  async function addProduct(name: string, creationId: string) {
+    if (pending.current.size || lockedRef.current || !navigator.onLine || !cloudReady) throw new Error("Wait for saved changes and a cloud connection before adding a product.");
+    lockedRef.current = true; setLocked(true); generation.current++;
+    try {
+      const response = await fetch("/api/products", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ name, creationId }), signal: AbortSignal.timeout(20000) });
+      const result = await response.json() as { error?: string };
+      if (!response.ok) throw new Error(result.error ?? "Couldn’t add product. Please retry.");
+      setQuery(name.trim()); setFilter("all"); setView("count");
+    } finally {
+      lockedRef.current = false; setLocked(false); generation.current++;
+      await load(true);
+    }
+  }
   async function reviewBackup() {
     if (pending.current.size || lockedRef.current || !navigator.onLine) throw new Error("Wait for saved changes and an internet connection before restoring.");
     lockedRef.current = true; setLocked(true); generation.current++;
@@ -165,11 +179,12 @@ export default function Home() {
   return <div className="app-shell">
     <header className="topbar"><div className="topbar-inner"><a className="brand" href="/" aria-label="Stockroom home"><span className="brand-icon"><Box size={23}/></span><span>stockroom<span className="brand-dot">.</span></span></a><div className="shop-label"><span className="live-dot"/> YOUR SHOP</div></div></header>
     <main>
-      <section className="intro"><div><div className="eyebrow">KEEP EVERY PIECE IN CHECK</div><h1>Stock counter<span>.</span></h1><p>A quick count. Everything in its place.</p></div><div className={"sync-pill " + (!online || errors || loadError ? "warning" : "")} role="status">{!online ? <WifiOff size={15}/> : unsaved && !errors ? <LoaderCircle size={15} className="spin"/> : errors || loadError ? <CircleAlert size={15}/> : <CheckCheck size={16}/>}<span>{loading ? "Loading stock" : !online ? "Offline · read only" : locked ? "Reviewing backup" : errors ? "Changes need attention" : unsaved ? "Saving changes…" : !cloudReady ? "Saved copy · read only" : "All changes saved"}</span></div></section>
+      <section className="intro"><div><div className="eyebrow">KEEP EVERY PIECE IN CHECK</div><h1>Stock counter<span>.</span></h1><p>A quick count. Everything in its place.</p></div><div className={"sync-pill " + (!online || errors || loadError ? "warning" : "")} role="status">{!online ? <WifiOff size={15}/> : unsaved && !errors ? <LoaderCircle size={15} className="spin"/> : errors || loadError ? <CircleAlert size={15}/> : <CheckCheck size={16}/>}<span>{loading ? "Loading stock" : !online ? "Offline · read only" : locked ? "Updating stock…" : errors ? "Changes need attention" : unsaved ? "Saving changes…" : !cloudReady ? "Saved copy · read only" : "All changes saved"}</span></div></section>
       <section className="overview" aria-label="Stock overview"><div><span className="stat-label">Products</span><strong>{loading ? "—" : products.length.toLocaleString()}<small>in your catalogue</small></strong></div><div><span className="stat-label">Total pieces</span><strong>{loading ? "—" : total.toLocaleString()}<small>current stock</small></strong></div><div className="third-stat"><span className="stat-label">Products in stock</span><strong>{loading ? "—" : inStock.toLocaleString()}<small>with quantity above zero</small></strong></div><span className="overview-icon" aria-hidden="true"><Package size={48} strokeWidth={1}/></span></section>
       <BackupPanel snapshot={snapshot} localSavedAt={localSavedAt} storageError={storageError} canRestore={online && !locked} busy={unsaved > 0} onReview={reviewBackup} onRestore={restoreBackup} onReviewEnd={endReview}/>
       <section className="workspace">
         <div className="workspace-heading"><div className="tabs" role="tablist" aria-label="View"><button role="tab" aria-selected={view === "count"} className={view === "count" ? "active" : ""} onClick={() => setView("count")}>Count stock</button><button role="tab" aria-selected={view === "products"} className={view === "products" ? "active" : ""} onClick={() => setView("products")}>Products</button></div><span className="unit-label">UNIT <b>Pieces</b></span></div>
+        <AddProduct disabled={readOnly || unsaved > 0} onAdd={addProduct}/>
         <div className="toolbar"><div className="search"><Search size={20}/><input aria-label="Search products" placeholder="Search product name…" value={query} onChange={e => setQuery(e.target.value)}/>{query && <button onClick={() => setQuery("")} aria-label="Clear search"><X size={17}/></button>}<span className="search-count">{visible.length}</span></div><button className="refresh" aria-label="Refresh shared stock" onClick={() => void load(true)} disabled={refreshing}><RefreshCw size={18} className={refreshing ? "spin" : ""}/></button></div>
         <div className="list-meta"><div className="filters"><button className={filter === "all" ? "selected" : ""} onClick={() => setFilter("all")}>All products</button><button className={filter === "stock" ? "selected" : ""} onClick={() => setFilter("stock")}>In stock</button></div><span>{view === "count" ? "Tap ± or enter a quantity" : "Your product catalogue"}</span></div>
         {!online && <div className="notice"><WifiOff size={17}/> Read-only count from this device. Internet is required to verify or save stock. Keep this page open if changes are still pending.</div>}

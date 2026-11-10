@@ -10,7 +10,7 @@ Drizzle still describes the schema; request handlers execute SQL through the RES
 
 ## Data model
 
-Product names and stable IDs are in `data/products.json`. They are joined in application code with the `stock` table. A missing stock row represents quantity 0 and version 0. The first write creates the row. Opening or redeploying the app does not reset existing quantities.
+Original product names and stable IDs are in `data/products.json`. Operator-added names are in `custom_products`, using IDs starting at 1000000, unique normalized names and unique creation request IDs. They are joined in application code with the `stock` table. A missing stock row represents quantity 0 and version 0. The first write creates the row. Opening or redeploying the app does not reset existing quantities.
 
 | stock column | SQL type | Meaning |
 | --- | --- | --- |
@@ -25,6 +25,7 @@ There is no count history, operator identity, timestamp column or data-expiry se
 
 | Method and endpoint | Behaviour |
 | --- | --- |
+| POST /api/products | Add a named product; 201 on creation, 200 on same-request retry, 409 for duplicate names |
 | GET /api/stock | Full catalogue with saved quantities and versions; no cache |
 | PATCH /api/stock | Validated single-product save using an expected version and request ID |
 | POST /api/stock/restore | Validate a full backup and previewed state, then restore changed quantities atomically |
@@ -50,3 +51,9 @@ Local storage failure is shown to the operator and does not prevent cloud saving
 The original hosted Site uses owner-private Sites access. That boundary does not transfer to Vercel. This application has no custom login, and Origin checks are not authentication. Protect the Vercel deployment before connecting real shop data. Without protection, anyone able to reach its APIs can read or change quantities. See `VERCEL.md`.
 
 Source control contains the catalogue, not live counts. A new D1 database is empty until quantities are saved or explicitly restored from a downloaded backup. Changing domains creates a separate browser-local storage area; export the original backup before moving. Never reset or recreate the original database to migrate hosting.
+
+## Operator-added products
+
+The server initializes `custom_products` with CREATE TABLE IF NOT EXISTS on first catalogue access per client. Existing stock is preserved. One INSERT allocates each new ID, with uniqueness constraints preventing duplicate names and duplicate request IDs. Names are trimmed, whitespace-normalized and compared case-insensitively. New products start at zero and use the existing stock API to change quantities.
+
+Version-1 backups remain compatible: old backups leave later additions unchanged. Custom IDs and names are checked against the server catalogue on restore. An unknown custom ID blocks the restore rather than creating orphan stock rows; database recovery must preserve the custom_products table as well as stock.

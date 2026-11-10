@@ -1,4 +1,4 @@
-import { testClient, databaseFailure } from "./d1-test-client.mjs";
+import { testClient, catalogueURL, databaseFailure } from "./d1-test-client.mjs";
 import { DatabaseSync } from 'node:sqlite';
 import { readFileSync } from 'node:fs';
 import ts from 'typescript';
@@ -30,7 +30,7 @@ assert.equal(helpers.mergeConfirmed([{ ...zero[0], quantity: 10, version: 2 }], 
 const database = new DatabaseSync(':memory:');
 database.exec(readFileSync('drizzle/0000_red_northstar.sql', 'utf8'));
 globalThis.__stockTestEnv = { DB: testClient(database), databaseFailure };
-const restoreSource = readFileSync('app/api/stock/restore/route.ts', 'utf8').replace('import { getDb, databaseFailure } from "@/db";', 'const getDb = () => globalThis.__stockTestEnv.DB; const databaseFailure = globalThis.__stockTestEnv.databaseFailure;').replace('"@/lib/backup"', JSON.stringify(backupURL));
+const restoreSource = readFileSync('app/api/stock/restore/route.ts', 'utf8').replace('import { getDb, databaseFailure } from "@/db";', 'const getDb = () => globalThis.__stockTestEnv.DB; const databaseFailure = globalThis.__stockTestEnv.databaseFailure;').replace('"@/lib/backup"', JSON.stringify(backupURL)).replace('"@/db/catalogue"', JSON.stringify(catalogueURL));
 const { POST } = await import(moduleURL(restoreSource));
 function current() { const byId = new Map(database.prepare('SELECT * FROM stock').all().map(p => [p.product_id, p])); return zero.map(p => ({ ...p, quantity: byId.get(p.id)?.quantity ?? 0, version: byId.get(p.id)?.version ?? 0 })); }
 const send = (backup, expected, mutationId = 'restore-test-00000000', origin = 'https://shop.test') => POST(new Request('https://shop.test/api/stock/restore', { method: 'POST', headers: { 'Content-Type': 'application/json', origin }, body: JSON.stringify({ backup, expected, mutationId }) }));
@@ -46,5 +46,18 @@ const invalid = structuredClone(populated); invalid.products[0].quantity = -20;
 assert.equal((await send(invalid, current())).status, 400); assert.deepEqual(current(), beforeConflict);
 assert.equal((await send(populated, current(), 'restore-csrf-test-000', 'https://other.test')).status, 403);
 const second = await send(backup, current(), 'restore-zero-test-00000'); assert.equal(second.status, 200); assert.equal((await second.json()).restored, 731); assert.ok(current().every(p => p.quantity === 0));
+database.prepare("INSERT INTO custom_products (id, name, name_key, creation_id) VALUES (1000000, 'Custom paint', 'custom paint', 'backup-custom-test-00')").run();
+database.prepare("INSERT INTO stock (product_id, quantity, version, mutation_id) VALUES (1000000, 7, 1, 'custom-stock-test-0000')").run();
+const custom = { id: 1000000, name: 'Custom paint', quantity: 7, version: 1 };
+const withCustom = helpers.createBackup([...current(), custom]);
+assert.deepEqual(helpers.parseBackup(JSON.stringify(withCustom)), withCustom);
+assert.equal((await send(backup, withCustom.products, 'legacy-restore-000000')).status, 200);
+assert.equal(database.prepare('SELECT quantity FROM stock WHERE product_id = 1000000').get().quantity, 7, 'Old backup preserves later products');
+const changedCustom = helpers.createBackup(withCustom.products.map(p => p.id === custom.id ? { ...p, quantity: 9 } : p));
+assert.equal((await send(changedCustom, withCustom.products, 'custom-restore-000000')).status, 200);
+assert.equal(database.prepare('SELECT quantity FROM stock WHERE product_id = 1000000').get().quantity, 9);
+const unknown = helpers.createBackup([...current(), { ...custom, id: 1000001 }]);
+assert.equal((await send(unknown, unknown.products)).status, 409);
+assert.equal(database.prepare('SELECT quantity FROM stock WHERE product_id = 1000000').get().quantity, 9);
 database.close(); delete globalThis.__stockTestEnv;
 console.log('PASS: snapshot validation, blocked storage, stale-response merge, all-731 atomic restore, retry, stale preview rejection, invalid file rejection and cross-origin rejection.');

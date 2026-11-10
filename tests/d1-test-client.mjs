@@ -15,3 +15,6 @@ export function testClient(database) {
     return Response.json({ success: true, result: [{ success: true, results: database.prepare(sql).all(...params) }] });
   });
 }
+
+const catalogueSource = readFileSync('db/catalogue.ts', 'utf8').replace('import products from "@/data/products.json";', `const products = ${readFileSync('data/products.json', 'utf8')};`);
+export const catalogueURL = 'data:text/javascript;base64,' + Buffer.from(ts.transpileModule(catalogueSource, { compilerOptions: { module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2022 } }).outputText).toString('base64');

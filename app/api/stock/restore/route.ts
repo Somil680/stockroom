@@ -1,4 +1,5 @@
 import { getDb, databaseFailure } from "@/db";
+import { readCatalogue } from "@/db/catalogue";
 import { MAX_BACKUP_BYTES, validateBackup, validateProducts } from "@/lib/backup";
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
@@ -20,6 +21,10 @@ export async function POST(request: Request) {
   const versions = new Map(expected.map(p => [p.id, p.version]));
   const rows = backup.products.map(p => ({ id: p.id, quantity: p.quantity, version: versions.get(p.id) }));
   try {
+    const catalogue = new Map((await readCatalogue(getDb())).map(p => [p.id, p.name]));
+    if (backup.products.some(p => catalogue.get(p.id) !== p.name || !versions.has(p.id))) {
+      return Response.json({ error: "This backup contains products missing from the current catalogue or preview. Refresh and review again." }, { status: 409, headers });
+    }
     // One SQL statement checks every previewed version and applies the whole restore.
     // Any stale row blocks ALL writes. No partial restore and no schema changes.
     const { results } = await getDb().prepare(`WITH incoming AS (

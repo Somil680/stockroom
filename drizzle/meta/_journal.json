@@ -8,6 +8,13 @@
       "when": 1792327412827,
       "tag": "0000_red_northstar",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1794296048453,
+      "tag": "0001_huge_quasimodo",
+      "breakpoints": true
     }
   ]
 }

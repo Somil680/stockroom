@@ -98,3 +98,7 @@ Open `/api/stock` on the production domain. A successful response contains all 7
 | `D1_QUERY` / `D1_RESPONSE` / `D1_UNKNOWN` | Inspect Vercel function logs and Cloudflare service status. Logs include only an allowlisted error code and upstream HTTP status. |
 
 An unavailable database never produces a successful zero-filled response. The existing confirmed local snapshot stays read-only until cloud access recovers. Save/restore errors keep their ambiguous-outcome warning because a write may have committed before a response was lost.
+
+### Add product
+
+The Add product form starts each new product at zero pieces. The new `custom_products` table initializes automatically on first access with the existing D1 Edit token; no manual SQL step is required. Original products and saved counts remain unchanged. The matching additive migration is included in `drizzle/`.
